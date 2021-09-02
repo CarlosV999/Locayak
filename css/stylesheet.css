@@ -63,3 +63,11 @@
     display: inline-block;
     width: 40%;
   }
+
+  .footer{
+    background: #ffbd08;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-right: 0;
+  }
