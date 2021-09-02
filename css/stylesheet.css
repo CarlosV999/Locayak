@@ -48,8 +48,18 @@
     border:solid 1px black; margin:5px; padding:5px;
   }
   
-  
+  .kayak {
+    display: inline-block;
+  }
+
+  .resume {
+  }
+
+  .image {
+    
+  }
   .image > img{
     position: relative;
+    display: inline-block;
     width: 40%;
   }
