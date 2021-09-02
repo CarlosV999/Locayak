@@ -40,3 +40,16 @@
   .active {
     background-color: #04AA6D;
   }
+
+  p {
+    border:solid 1px black; margin:5px; padding:5px;
+  }
+  div {
+    border:solid 1px black; margin:5px; padding:5px;
+  }
+  
+  
+  .image > img{
+    position: relative;
+    width: 40%;
+  }
