@@ -11,7 +11,7 @@ function getConnexion()
 
     $dsn = 'mysql:dbname=' . $base . ';host=' . $hote;
     $connexion = new PDO($dsn, $usager, $motdepasse);
-    print_r($connexion);
+    // print_r($connexion);
     return $connexion;
 }
 ?>

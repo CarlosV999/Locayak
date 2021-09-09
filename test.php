@@ -9,7 +9,7 @@ $listeKayak = listeKayak();
 
 <head>
   <meta charset="utf-8" />
-  <title>Page Test</title>
+  <title>Page liste kayak admin</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@ $listeKayak = listeKayak();
         </colgroup>
         <tr>
           <th class="tb-text">Titre</th>
-          <th class="tb-text"><a href="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['titre']; ?><a></th>
+          <th class="tb-text"><a href="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['type']; ?></a></th>
         </tr>
         </tr>
       </table>
