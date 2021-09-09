@@ -21,14 +21,18 @@ require_once "../dao/kayakDAO.php";
       <input placeholder="Titre" id="titre" name="titre" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
+      <label for="descriptionAnnonce">Description de voter annonce</label>
+      <input placeholder="DescriptionAnnonce" id="descriptionAnnonce" name="descriptionAnnonce" type="text" tabindex="1" required >
+    </fieldset>
+    <fieldset>
       <label for="adresse">Votre adresse</label>
       <input placeholder="Adresse" id="adresse" name="adresse" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <label for="taille">Taille du Kayak</label></br>
-      <input type="radio" id="taille" name="taille" value="Petit"> Petit<br>
-      <input type="radio" id="taille" name="taille" value="Moyen"> Moyen<br>
-      <input type="radio" id="taille" name="taille" value="Grand"> Moyen
+      <label for="type">Taille du Kayak</label></br>
+      <input type="radio" id="type" name="type" value="Petit"> Petit<br>
+      <input type="radio" id="type" name="type" value="Moyen"> Moyen<br>
+      <input type="radio" id="type" name="type" value="Grand"> Moyen
     </fieldset>
     <fieldset>
       <label for="cout">Cout de la location</label>
