@@ -24,4 +24,12 @@ class kayakDAO{
         $requeteAjoutKayak->bindParam(':idMembre', $informationKayak['idMembre'], PDO::PARAM_STR);
         return $requeteAjoutKayak-> execute();
     }
+
+    public static function supprimerKayak($idKayak){
+        $MESSAGE_SQL_SUPPRIMER_KAYAK = "DELETE FROM kayak WHERE id=:id";
+
+        $requeteSuppKayak = BaseDeDonnee::getConnexion()-> prepare($MESSAGE_SQL_SUPPRIMER_KAYAK); 
+        $requeteSuppKayak-> bindParam('id',$id,PDO::PARAM_INT);
+        return $requeteSuppKayak-> execute();
+    }
 }
