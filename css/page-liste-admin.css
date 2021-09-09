@@ -1,4 +1,4 @@
-s.kayak > .resume{
+s.kayak > .descriptionAnnonce{
     position: relative;
     border:solid 1px black; margin:5px; padding:5px;
     background-color:aquamarine;
@@ -16,7 +16,7 @@ s.kayak > .resume{
 
   }
 
-  .resume {
+  .descriptionAnnonce {
   }
 .image{
     
@@ -28,8 +28,12 @@ s.kayak > .resume{
     width: 70%;
 }
 
-.renseignement{
+.renseignementLieu{
     border:solid 1px black; margin:5px; padding:5px;
+}
+
+.renseignementPropriétaire{
+  border:solid 1px black; margin:5px; padding:5px;
 }
 
 .boutonAjouter {
