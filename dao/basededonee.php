@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 function getConnexion()
 {
-    $usager = 'root';
+    $usager = 'admin';
     $motdepasse = 'pJQN4ZkV';
     $hote = 'localhost';
     $base = 'kayak_site';

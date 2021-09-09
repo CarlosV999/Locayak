@@ -26,9 +26,6 @@ $listeKayak = listeKayak();
           <th class="tb-text">Titre</th>
           <th class="tb-text"><a href="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['titre']; ?><a></th>
         </tr>
-        <tr>
-          <td class="tb-text">Description</td>
-          <td class="tb-text"><?= $kayak['synopsis']; ?></td>
         </tr>
       </table>
     <?php
