@@ -20,7 +20,7 @@ $listeKayak = kayakDAO::listeKayak();
     <body>
         <div class="header">
             <h1>LoCayak</h1>
-            <ul>
+            <ul id = "mesLiens">
                 <li><a href="#">Acceuil</a></li>
                 <li><a href="#">Location</a></li>
                 <li><a href="#">Membre</a></li>

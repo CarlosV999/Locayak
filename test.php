@@ -1,6 +1,6 @@
 <?php
 require_once "dao/kayakDAO.php";
-$listeKayak = listeKayak();
+$listeKayak = kayakDAO::listeKayak();
 
 ?>
 
@@ -13,6 +13,8 @@ $listeKayak = listeKayak();
 </head>
 
 <body>
+  
+<?php include 'header.php'?>
   <div class="table">
     <?php
     foreach ($listeKayak as $kayak) {
