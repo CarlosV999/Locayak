@@ -10,6 +10,17 @@ class kayakDAO{
         return $requeteSelectKayak->fetchAll();
     }
 
+    public static function voirMembre(Int id)
+    {
+        
+    }
+    public static function listeMembre()
+    {
+        $SQL_RECUPERER_MEMBRE = "SELECT * FROM `membre`";
+        $requeteSelectKayak = getConnexion()->prepare($SQL_RECUPERER_MEMBRE);
+        $requeteSelectKayak->execute();
+        return $requeteSelectKayak->fetchAll();
+    }
     public static function ajouterKayak($informationKayak,$image)
     {
           

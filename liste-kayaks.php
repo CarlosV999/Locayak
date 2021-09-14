@@ -2,7 +2,7 @@
 
 require_once "dao/kayakDAO.php";
 $listeKayak = kayakDAO::listeKayak();
-$nomProprio = kayakDAO::listeMembre();
+
 
 ?>
 
@@ -34,7 +34,9 @@ $nomProprio = kayakDAO::listeMembre();
             <?php
             foreach ($listeKayak as $kayak) {
 
-                
+                $listeMembre = kayakDAO::listeMembre();
+                $idMembre = $kayak["idMembre"];
+                print_r($listeMembre);
             ?>
             
             <div class="kayak">
