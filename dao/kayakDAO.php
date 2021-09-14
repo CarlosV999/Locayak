@@ -10,9 +10,9 @@ class kayakDAO{
         return $requeteSelectKayak->fetchAll();
     }
 
-    public static function voirMembre(Int id)
+    public static function voirMembre()
     {
-        
+
     }
     public static function listeMembre()
     {
