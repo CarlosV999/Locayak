@@ -1,16 +1,10 @@
 <?php
 require_once "../dao/kayakDAO.php";
 
+    require_once "header-admin.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8" />
-  <title>Ajouter votre Kayak</title>
-</head>
-
+<title>Ajouter votre Kayak</title>
 <body>
 <div class="container">
     <form action="traitement_ajouter_kayak.php" method="post" enctype="multipart/form-data">
@@ -32,7 +26,7 @@ require_once "../dao/kayakDAO.php";
       <label for="type">Taille du Kayak</label></br>
       <input type="radio" id="type" name="type" value="Petit"> Petit<br>
       <input type="radio" id="type" name="type" value="Moyen"> Moyen<br>
-      <input type="radio" id="type" name="type" value="Grand"> Moyen
+      <input type="radio" id="type" name="type" value="Grand"> Grand
     </fieldset>
     <fieldset>
       <label for="cout">Cout de la location</label>
