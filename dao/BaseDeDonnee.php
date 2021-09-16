@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 
 class BaseDeDonnee{
 public static function getConnexion(){
-    
     $usager = 'admin';
     $motdepasse = 'pJQN4ZkV';
     $hote = 'localhost';
