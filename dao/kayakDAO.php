@@ -34,9 +34,8 @@ class kayakDAO{
 
     public static function supprimerKayak($idKayak){
         $MESSAGE_SQL_SUPPRIMER_KAYAK = "DELETE FROM kayak WHERE id=:id";
-
         $requeteSuppKayak = BaseDeDonnee::getConnexion()-> prepare($MESSAGE_SQL_SUPPRIMER_KAYAK); 
-        $requeteSuppKayak-> bindParam('id',$id,PDO::PARAM_INT);
+        $requeteSuppKayak-> bindParam('id',$idKayak,PDO::PARAM_INT);
         return $requeteSuppKayak-> execute();
     }
 
