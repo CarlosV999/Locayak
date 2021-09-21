@@ -3,18 +3,13 @@ require_once "dao/kayakDAO.php";
 $listeKayak = kayakDAO::listeKayak();
 
 ?>
+<?php
+require_once "css/header.php";
+?>
 
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8" />
-  <title>Page liste kayak admin</title>
-</head>
 
 <body>
-  
-<?php include 'header.php'?>
+
   <div class="table">
     <?php
     foreach ($listeKayak as $kayak) {
