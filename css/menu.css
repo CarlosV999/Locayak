@@ -30,6 +30,7 @@
     display: table; 
     float: left; 
     clear: left; 
+    z-index: 2;
   }
   
   .menuCacher{
@@ -53,5 +54,22 @@ ul {
   
   li a:hover {
     background-color: #555;
-    color: white;
+    color: #ffffff;
   }
+
+      /* unvisited link */
+      .logo:link {
+        color: white;
+      }
+      /* visited link */
+      .logo:visited {
+        color: white;
+      }
+      /* mouse over link */
+      .logo:hover {
+        color: white;
+      }
+      /* selected link */
+      .logo:active {
+        color: white;
+      }
