@@ -21,15 +21,15 @@
 
   .resume {
   }
-.image{
-    
-    background-color: bisque;
-    width: 30%;
-    height: 15%;
-}
-.image > img{
-    width: 70%;
-  }
   .renseignement{
     border:solid 1px black; margin:5px; padding:5px;
+  }
+
+  .barre-recherche{
+    display: flex;
+    margin-left:40%;
+  }
+
+  .barre-recherche > button {
+    height: 39;
   }

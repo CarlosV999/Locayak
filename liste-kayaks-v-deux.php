@@ -6,9 +6,18 @@ $listeKayak = KayakDAO::listeKayak();
 require_once "header.php";
 ?>
 
-
+<div class="barre-recherche">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="button" class="btn btn-primary">
+    <i class="fas fa-search">Recherche</i>
+  </button>
+</div>
 
 <div class="liste-kayak">
+    
 
     <?php
             foreach ($listeKayak as $kayak) {
