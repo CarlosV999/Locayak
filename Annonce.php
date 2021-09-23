@@ -1,8 +1,8 @@
 <?php
-require_once "dao/kayakDAO.php";
+require_once "dao/KayakDAO.php";
 require_once "header.php";
 $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
-$kayak = kayakDAO::selectionnerKayak($id);
+$kayak = KayakDAO::selectionnerKayak($id);
 ?>
 
 <title>Annonce</title>
