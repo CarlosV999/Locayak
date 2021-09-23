@@ -1,5 +1,5 @@
 <?php
-require_once "../dao/kayakDAO.php";
+require_once "../dao/KayakDAO.php";
 
     require_once "header-admin.php";
 ?>
@@ -12,7 +12,7 @@ require_once "../dao/kayakDAO.php";
     <h4>Entre les information de votre Kayak</h4>
     <fieldset>
       <label for="titre">Titre de votre annonce</label>
-      <input placeholder="Titre" id="titre" name="titre" type="text" tabindex="1" required autofocus>
+      <input placeholder="Titre" id="titreAnnonce" name="titre" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
       <label for="descriptionAnnonce">Description de voter annonce</label>

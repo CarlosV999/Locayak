@@ -1,6 +1,6 @@
 <?php
 require_once  "BaseDeDonnee.php";
-class kayakDAO{
+class KayakDAO{
     public static function listeKayak()
     {
         $MESSAGE_SQL_RECUPERER = "SELECT * FROM `kayak`";

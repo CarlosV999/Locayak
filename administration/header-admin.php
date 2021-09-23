@@ -3,11 +3,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Acceuil</title>
-  <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/liste-kayak-admin.css">
-  <link rel="stylesheet" href="../css/page-liste.css">
-  <link rel="stylesheet" href="../css/stylesheet.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/menu.css?version=1">
+  <link rel="stylesheet" href="../css/liste-kayak-admin.css?version=1">
+  <link rel="stylesheet" href="../css/page-liste.css?version=1">
+  <link rel="stylesheet" href="../css/stylesheet.css?version=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?version=1">
 </head>
 <body>
     <div class="header">

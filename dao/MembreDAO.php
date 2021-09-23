@@ -2,7 +2,8 @@
 <?php
 require_once  "basededonee.php";
 require_once  "BaseDeDonnee.php";
-class membreDAO{
+
+class MembreDAO{
     public static function listeMembre()
     {
         $SQL_RECUPERER_MEMBRE = "SELECT * FROM `membre`";

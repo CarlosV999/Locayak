@@ -1,7 +1,7 @@
 <?php
 require_once "configuration.php";
 
-require_once CHEMIN_DAO."kayakDAO.php";
+require_once CHEMIN_DAO."KayakDAO.php";
 
 
 $repertoireIllustration = $_SERVER['DOCUMENT_ROOT'] . "/DevoirTransactionnel/images/";
@@ -26,11 +26,11 @@ $kayak= filter_input_array(INPUT_POST, $filtresKayak);
 
 $illustration =$_FILES['illustration']['name'];
 
-$reussiteAjout = kayakDAO::ajouterKayak($kayak,$illustration);
+$reussiteAjout = KayakDAO::ajouterKayak($kayak,$illustration);
 
 if($reussiteAjout){
     echo "Ajout Reussi";
-    echo "</br><a href='liste-kayaks_admin.php'>Retour</a>";
+    echo "<a href='liste-kayaks-admin.php'>Retour</a>";
 } else{
     echo "Erreur: ".$reussiteAjout;
 }

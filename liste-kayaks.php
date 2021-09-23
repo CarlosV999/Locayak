@@ -1,7 +1,7 @@
 <?php
 
-require_once "dao/kayakDAO.php";
-$listeKayak = kayakDAO::listeKayak();
+require_once "dao/KayakDAO.php";
+$listeKayak = KayakDAO::listeKayak();
 
 require_once "header.php";
 ?>
@@ -21,7 +21,7 @@ require_once "header.php";
                     
                 <h3 class="nom" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['titreAnnonce']; ?><a title="" ></a></h3>
                 
-                <div class="image" ><img src="images/<?= $kayak['image'];?>" /></div>
+                <img class="image" src="images/<?= $kayak['image'];?>" />
                 <div class="resume"><?= $kayak["descriptionAnnonce"];?></div>
                 <div class="renseignement" href ="voir-membre.php?id=<?= $kayak['idMembre'] ?>"><?php ?></div>
                 <div class="renseignement" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['adresse']; ?></div>
