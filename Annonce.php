@@ -10,7 +10,7 @@ $kayak = KayakDAO::selectionnerKayak($id);
   <div class="kayak">
         
     <h1 class="nom" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['titreAnnonce']; ?><a title="" ></a></h1>
-    <div class="image" ><img src="images/<?= $kayak['image'];?>" /></div>
+    <img class= "image" src="images/<?= $kayak['image'];?>" />
     <div class="description"><?= $kayak["descriptionAnnonce"];?></div>
     <div class="proprietaire" href =>Propriétaire : Jean Michel</div>
     <div class="cote" href=>Cote propriétaire : *****</div>
