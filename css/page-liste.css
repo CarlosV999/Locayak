@@ -27,7 +27,8 @@
 
   .barre-recherche{
     display: flex;
-    margin-left:40%;
+   justify-content: center;
+    margin-top:15px;
   }
 
   .barre-recherche > button {
