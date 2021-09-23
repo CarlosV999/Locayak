@@ -29,10 +29,7 @@ require_once "header-admin.php";
                 
                 <a href="modifierKayak.php?id=<?=$kayak['id']?>">Modifier</a>
             
-                <button class="boutonSupprimer"
-                    type="button">
-                    Supprimer
-                </button>
+                <a href="traitement_supprimer_kayak.php?id=<?=$kayak['id']?>">Supprimer</a>
 
             </div>
         </div>

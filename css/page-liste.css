@@ -10,7 +10,10 @@
   div {
   }
   .liste-kayak{
-      
+    display: flex;
+    align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   }
   .kayak{
 

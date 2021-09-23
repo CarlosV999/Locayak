@@ -48,13 +48,11 @@
     border:solid 1px black; margin:5px; padding:5px;
   }
 
-  .footer{
+  footer{
     background: #ffbd08;
     color: white;
-    position: absolute;
-    bottom: 0;
-    margin-right: 0;
+    position: relative;
+    margin-bottom:0px;
     width: 100%;
-    margin-bottom: 0;
-    margin-top: 0;
+    z-index: 2000;
   }

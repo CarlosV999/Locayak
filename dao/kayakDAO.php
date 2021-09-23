@@ -28,7 +28,7 @@ class kayakDAO{
         $requeteAjoutKayak->bindParam(':type', $informationKayak['type'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':adresse', $informationKayak['adresse'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':cout', $informationKayak['cout'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':idMembre', 0, PDO::PARAM_STR);
+        $requeteAjoutKayak->bindParam(':idMembre', $informationKayak['idmembre'], PDO::PARAM_STR);
         return $requeteAjoutKayak-> execute();
     }
 
