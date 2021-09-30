@@ -1,8 +1,8 @@
 <?php
 require_once "configuration.php";
-require_once CHEMIN_DAO."kayakDAO.php";
+require_once CHEMIN_DAO."KayakDAO.php";
 $id= filter_input(INPUT_GET, 'id' , FILTER_VALIDATE_INT);
-$reussiteSupp = kayakDAO::supprimerKayak($id);
+$reussiteSupp = KayakDAO::supprimerKayak($id);
 
 if($reussiteSupp){
     echo "Suppresion Reussi";

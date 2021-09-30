@@ -30,7 +30,34 @@
    justify-content: center;
     margin-top:15px;
   }
-
+.card-img-top{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: auto;
+  max-width: 300px;
+  height: 250px;
+}
+.card{
+  padding-top: 15px;
+  height: 500px;
+  width:500px; 
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  border: 2px;
+  background-color: #e9d8a9;
+  border: solid 2px rgb(121, 120, 120);
+}
   .barre-recherche > button {
     height: 39;
+  }
+  .btn-primary2{
+    position: absolute;
+    bottom: 15px;
+    background: #ffbd08;
+    color: #fff;
+  }
+  .btn-primary{
+    background: #ffbd08;
   }

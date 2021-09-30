@@ -1,7 +1,7 @@
 <?php
 require_once "configuration.php";
 
-require_once CHEMIN_DAO."kayakDAO.php";
+require_once CHEMIN_DAO."KayakDAO.php";
 
 
 $repertoireIllustration = $_SERVER['DOCUMENT_ROOT'] . "/DevoirTransactionnel/images/";
@@ -27,7 +27,7 @@ $kayak= filter_input_array(INPUT_POST, $filtresKayak);
 
 $illustration =$_FILES['illustration']['name'];
 
-$reussiteModif = kayakDAO::modifierKayak($kayak);
+$reussiteModif = KayakDAO::modifierKayak($kayak);
 
 if($reussiteModif){
     echo "Modification reussie";

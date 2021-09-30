@@ -22,15 +22,16 @@ class MembreDAO{
     public static function ajouterMembre($informationMembre)
     {
           
-        $MESSAGE_SQL_AJOUTER_MEMBRE = "INSERT INTO membre (nom,adresse,type,adresse,cout,idMembre,image) VALUES (:titreAnnonce,:descriptionAnnonce,:type, :adresse,:cout,:idMembre,'$image')";
-        $requeteAjoutKayak = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_JEU); 
+        $MESSAGE_SQL_AJOUTER_MEMBRE = "INSERT INTO membre (nom,adresse,email,description,locateur,image,cote) VALUES (:nom,:adresse,:email, :description,:locateur,:image,:cote)";
+        $requeteAjoutMembre = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_MEMBRE); 
 
-        $requeteAjoutKayak->bindParam(':titreAnnonce', $informationKayak['titreAnnonce'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':descriptionAnnonce', $informationKayak['descriptionAnnonce'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':type', $informationKayak['type'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':adresse', $informationKayak['adresse'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':cout', $informationKayak['cout'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':idMembre', $informationKayak['idmembre'], PDO::PARAM_STR);
-        return $requeteAjoutKayak-> execute();
+        $requeteAjoutMembre->bindParam(':titreAnnonce', $informationMembre['nom'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':descriptionAnnonce', $informationMembre['adresse'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':type', $informationMembre['email'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':adresse', $informationMembre['description'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':cout', $informationMembre['locateur'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':idMembre', $informationMembre['image'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':idMembre', $informationMembre['cote'], PDO::PARAM_STR);
+        return $requeteAjoutMembre-> execute();
     }
 }

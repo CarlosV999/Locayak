@@ -1,6 +1,7 @@
 <?php
 require_once "../dao/KayakDAO.php";
-$listeKayak = KayakDAO::listeKayak();
+//Remplacer pour l'id recuperer de la session
+$listeKayak = KayakDAO::listeKayakPourMembre(1);
   include_once "../administration/header-admin.php";
 ?>
 <link rel="stylesheet" href="../css/membre.css?<?php echo time(); ?>">

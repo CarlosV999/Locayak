@@ -8,6 +8,14 @@ class KayakDAO{
         $requeteSelectKayak->execute();
         return $requeteSelectKayak->fetchAll();
     }
+    public static function listeKayakPourMembre($id)
+    {
+        $MESSAGE_SQL_RECUPERER = "SELECT * FROM `kayak` WHERE idMembre = :id";
+        $requeteSelectKayak = BaseDeDonnee::getConnexion()->prepare($MESSAGE_SQL_RECUPERER);
+        $requeteSelectKayak->bindParam(':id', $id, PDO::PARAM_STR);
+        $requeteSelectKayak->execute();
+        return $requeteSelectKayak->fetchAll();
+    }
     public static function selectionnerKayak($id)
     {
         $MESSAGE_SQL_SELECTIONER = "SELECT * FROM `kayak` WHERE id = :id";

@@ -21,15 +21,6 @@
 
   .resume {
   }
-.image{
-    
-    background-color: bisque;
-    width: 30%;
-    height: 15%;
-}
-.image > img{
-    width: 100%;
-  }
   .renseignement{
     border:solid 1px black; margin:5px; padding:5px;
   }

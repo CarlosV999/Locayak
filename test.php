@@ -1,6 +1,6 @@
 <?php
-require_once "dao/kayakDAO.php";
-$listeKayak = kayakDAO::listeKayak();
+require_once "dao/KayakDAO.php";
+$listeKayak = KayakDAO::listeKayak();
 
 ?>
 <?php

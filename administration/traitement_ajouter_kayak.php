@@ -30,7 +30,7 @@ $reussiteAjout = KayakDAO::ajouterKayak($kayak,$illustration);
 
 if($reussiteAjout){
     echo "Ajout Reussi";
-    echo "<a href='liste-kayaks-admin.php'>Retour</a>";
+    ?><a href='liste-kayaks-admin.php'>Retour</a><?php
 } else{
     echo "Erreur: ".$reussiteAjout;
 }
