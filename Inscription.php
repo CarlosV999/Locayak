@@ -5,7 +5,7 @@ require_once "header.php";
 
 <title>Inscription</title>
 <div class="formulaireInscription">
-<form action="confirmationInscription.php">
+<form action="traitement_ajouter_membre.php">
   <label for="nom">Nom*:</label><br>
   <input type="text" id="nom" name="nom" placeholder="Nom" required><br>
   
@@ -26,9 +26,9 @@ require_once "header.php";
   <small>Format: 1 123 456-7898 </small><br><br>
 
   <label for="typeMembre">Type de membre*:</label><br>
-  <input type="radio" id="typeMembreLocateur" name="typeMembre" value="Locateur" required>
+  <input type="radio" id="typeMembreLocateur" name="typeMembre" value="1" required>
   <label for="locateur">Locateur</label><br>
-  <input type="radio" id="typeMembreLocataire" name="typeMembre" value="Locataire" required>
+  <input type="radio" id="typeMembreLocataire" name="typeMembre" value="0" required>
   <label for="locataire">Locataire</label><br>
   <input type="submit" value="Inscription">
 </form> 
