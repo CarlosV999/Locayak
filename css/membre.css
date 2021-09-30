@@ -1,0 +1,60 @@
+#image-profile{
+    width: 300px;
+    height: auto;
+}
+#zone-membre-global{
+    margin: 5%;
+  background-color: #e9d8a9;
+  border:1px solid black;
+}
+#zone-membre-info{
+    display: flex;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#zone-membre-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 15%;
+
+}
+.nom{
+   font-size: 25px;
+   text-align: center;
+}
+.mes-kayak{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-page-membre{
+    padding-top: 15px;
+    height: 400px;
+    width:400px; 
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border: 2px;
+    background-color: #e9d8a9;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px rgb(121, 120, 120);
+  }
+  .card-img-top-membre{
+    display: flex;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    max-width: 150px;
+    height: 100px;
+  }
+  .btn-primary2-membre{
+    position: absolute;
+    margin-top: 8%;
+    background: #ffbd08;
+    color: #fff;
+  }
