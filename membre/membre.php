@@ -1,8 +1,12 @@
 <?php
 require_once "../dao/KayakDAO.php";
+require_once "../dao/MembreDAO.php";
 //Remplacer pour l'id recuperer de la session
-$listeKayak = KayakDAO::listeKayakPourMembre(1);
+$id = 1;
+$listeKayak = KayakDAO::listeKayakPourMembre($id);
+$membre = MembreDAO::recupererMembre($id)[0];
   include_once "../administration/header-admin.php";
+$nomComplet =$membre['nom']." ".$membre['prenom'];
 ?>
 <link rel="stylesheet" href="../css/membre.css?<?php echo time(); ?>">
 
@@ -11,10 +15,10 @@ $listeKayak = KayakDAO::listeKayakPourMembre(1);
     <div id="zone-membre-info">
       <img src="../images/DefaultProfile.png" alt="Votre image de profile" id="image-profile">
       <div id="zone-membre-text">
-        <p class="nom">Jean Hugg</p>
-        <p>Description : Bonjours je m'appel Jean Hugg mais tout le monde m'appele Hulk, pourquoi ? Meme si je vous le disait vous me croyerais pas. Du coup mes Kayak . Alors il sont grand beau et fort mais il aime pas sortire le dimanche et faut pas les nourrir aprés minuit</p>
-        <p>Région: Bas Saint Laurent</p>
-        <p>Ma note : 8/10 </p>
+        <p class="nom"><?= $nomComplet;?></p>
+        <p>Description : <?= $membre['description'];?></p>
+        <p>Région: <?= $membre['adresse'];?></p>
+        <p>Ma note : <?= $membre['cote'];?>/10 </p>
       </div>
     </div>
     <p class="nom">Mes Kayaks</p>
