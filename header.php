@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/page-liste.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/stylesheet.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/page-.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/stylesheet-chatbox.css?<?php echo time(); ?>">
 </head>
 
 <body>
