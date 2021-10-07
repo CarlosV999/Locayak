@@ -19,33 +19,13 @@ include_once "../administration/header-admin.php";
 <body>
 
 
-
-    <section id="contenu">
-
-        <header>
-
             <h2>Zone Membre</h2>
-
-        </header>
-
-
-
-
-
-        <section id="contenu">
-
-            <header>
 
                 <h2>Formulaire d'inscription</h2>
 
-            </header>
-
-
+        <div id="groupe-inscription">
 
             <form method="post" action="traitement-inscription.php">
-
-
-
 
 
                 <fieldset>
@@ -56,7 +36,7 @@ include_once "../administration/header-admin.php";
 
 
 
-                    <div id="entree-nom">
+                    <div class="form-group" id="entree-nom">
 
                         <label for="nom">Votre Nom</label>
 
@@ -65,8 +45,7 @@ include_once "../administration/header-admin.php";
                     </div>
 
 
-
-                    <div id="entree-prenom">
+                    <div class="form-group" id="entree-prenom">
 
                         <label for="prenom">Votre Prénom</label>
 
@@ -74,9 +53,16 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
+                    <div class="form-group" id="entree-telephone">
+
+                    <label for="prenom">Votre numéro de téléphone</label>
+
+                    <input type="text" id="telephone" name="telephone" />
+
+                    </div>
 
 
-                    <div id="entree-description">
+                    <div class="form-group" id="entree-description">
 
                         <label for="description">Décription de vous même</label>                        
 
@@ -84,19 +70,7 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
-
-
-                    <div id="entree-pseudo">
-
-                        <label for="pseudo">Votre Pseudo</label>
-
-                        <input type="text" id="pseudo" name="pseudo" />
-
-                    </div>
-
-
-
-                    <div id="entree-email">
+                    <div class="form-group" id="entree-email">
 
                         <label for="email">Votre Email</label>
 
@@ -104,9 +78,15 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
+                    <div class="form-group" id="entree-image">
 
+                        <label for="image">Image de Profil</label></br>
 
-                    <div id="entree-passe">
+                        <input type="file" id="image" name="image" required>
+                    
+                    </div>
+
+                    <div class="form-group" id="entree-passe">
 
                         <label for="passe">Entrer votre Mot de Passe</label>
 
@@ -115,8 +95,7 @@ include_once "../administration/header-admin.php";
                     </div>
 
 
-
-                    <div id="entree-passe2">
+                    <div class="form-group" id="entree-passe2">
 
                         <label for="passe2">Confirmer votre Mot de Passe</label>
 
@@ -124,25 +103,15 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
-
-
-
-
-
-
                 </fieldset>
-
-
 
                 <input type="submit" name="" value="Enregistrer">
 
 
 
             </form>
-
-
-
-        </section>
+        
+        </div>
 
 <?php
   include_once "../administration/footer-admin.php";

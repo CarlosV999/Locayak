@@ -58,3 +58,7 @@
     background: #ffbd08;
     color: #fff;
   }
+
+  .groupe-inscription{
+    display: flex;  
+  }
