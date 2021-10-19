@@ -61,15 +61,6 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
-
-                    <div class="form-group" id="entree-description">
-
-                        <label for="description">Décription de vous même</label>                        
-
-				    <textarea name="description" id="description"></textarea>	
-
-                    </div>
-
                     <div class="form-group" id="entree-email">
 
                         <label for="email">Votre Email</label>
@@ -78,13 +69,6 @@ include_once "../administration/header-admin.php";
 
                     </div>
 
-                    <div class="form-group" id="entree-image">
-
-                        <label for="image">Image de Profil</label></br>
-
-                        <input type="file" id="image" name="image" required>
-                    
-                    </div>
 
                     <div class="form-group" id="entree-passe">
 

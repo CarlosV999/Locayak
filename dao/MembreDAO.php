@@ -17,40 +17,44 @@ class MembreDAO{
         $requeteSelectMembre = getConnexion()->prepare($SQL_RECUPERER_MEMBRE);
         $requeteSelectMembre->bindParam(':id', $id, PDO::PARAM_STR);
         $requeteSelectMembre->execute();
-        return $requeteSelectMembre->fetchAll();
+        return $requeteSelectMembre->fetch();
     }
+
     public static function ajouterMembre($informationMembre)
     {
-          
-        $MESSAGE_SQL_AJOUTER_MEMBRE = "INSERT INTO membre (nom,prenom,adresse,email,description,locateur,image,cote) VALUES (:nom,:prenom,:adresse,:email, :description,:locateur,:image,:cote)";
+        //print_r($informationMembre['mail']);
+
+        $MESSAGE_SQL_AJOUTER_MEMBRE = "INSERT INTO membre (nom, prenom, telephone, adresse, email, mdp) 
+                                       VALUES (:nom,:prenom, :telephone, :adresse, :email, :mdp)";
+
         $requeteAjoutMembre = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_MEMBRE); 
 
         $requeteAjoutMembre->bindParam(':nom', $informationMembre['nom'], PDO::PARAM_STR);
         $requeteAjoutMembre->bindParam(':prenom', $informationMembre['prenom'], PDO::PARAM_STR);
         $requeteAjoutMembre->bindParam(':adresse', $informationMembre['adresse'], PDO::PARAM_STR);
-        $requeteAjoutMembre->bindParam(':email', $informationMembre['email'], PDO::PARAM_STR);
-        $requeteAjoutMembre->bindParam(':description', $informationMembre['description'], PDO::PARAM_STR);
-        $requeteAjoutMembre->bindParam(':locateur', $informationMembre['locateur'], PDO::PARAM_STR);
-        $requeteAjoutMembre->bindParam(':image', $informationMembre['image'], PDO::PARAM_STR);
-        $requeteAjoutMembre->bindParam(':cote', $informationMembre['cote'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':telephone', $informationMembre['telephone'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':email', $informationMembre['mail'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':mdp', $informationMembre['motDePasse'], PDO::PARAM_STR);
         return $requeteAjoutMembre-> execute();
     }
 
-    public static function validerPseudoPasse($pseudo, $passe1, $passe2)
+    public static function recupererEmail($email)
+    {
+        $SQL_RECHERCHER_EMAIL = "SELECT email FROM membre WHERE email LIKE '%$email%'";
+
+        //print_r($SQL_RECHERCHER_EMAIL);
+
+        $rechercherEmail = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
+        $rechercherEmail->execute();
+
+        $listeEmails = $rechercherEmail->fetchAll();
+
+        return $listeEmails;
+    }
+
+    public static function validerEmailPasse($email, $passe1, $passe2)
     {
         $resultat = true;
-
-        if($passe2 == "" || $passe1 == "")
-        {
-            $resulat = false;
-            return $resulat;
-        }
-
-        if($pseudo == "")
-        {
-            $resultat = false;
-            return $resultat;
-        }
 
         if($passe1 != $passe2)
         {
@@ -58,22 +62,17 @@ class MembreDAO{
             return $resultat;
         }
 
-        $SQL_RECHERCHER_PSEUDO = "SELECT pseudo FROM membre WHERE pseudo LIKE '%$pseudo%'";
+        $listeEmails = MembreDAO::recupererEmail($email);
 
-        //print_r($SQL_RECHERCHER_PSEUDO);
+        print_r($listeEmails);
 
-        $rechercherMembre = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_PSEUDO);
-        $rechercherMembre->execute();
-
-        $listePseudos = $rechercherMembre->fetchAll();
-
-        //print_r($listePseudos);
-
-        foreach($listePseudos as $nom)
-            if($nom['pseudo'] == $pseudo)        
-                $resultat = false;
-
+        if(!empty($listeEmails))
+        {
+            $resultat = false;
+            return $resultat;
+        }    
+        $resultat = true;
         return $resultat;
-
+  
     }
 }
