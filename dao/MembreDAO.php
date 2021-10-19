@@ -40,18 +40,57 @@ class MembreDAO{
 
     public static function recupererEmail($email)
     {
-        $SQL_RECHERCHER_EMAIL = "SELECT email FROM membre WHERE email LIKE '%$email%'";
-
-        //print_r($SQL_RECHERCHER_EMAIL);
+        
+        $SQL_RECHERCHER_EMAIL = "SELECT email FROM membre WHERE email LIKE CONCAT('%', :email, '%')";
 
         $rechercherEmail = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
+
+        $rechercherEmail->bindParam(':email', $email, PDO::PARAM_STR);
         $rechercherEmail->execute();
 
         $listeEmails = $rechercherEmail->fetchAll();
-
+        
         return $listeEmails;
     }
 
+    public static function validerIdentificationMembre($infoIdMembre)
+    {
+        $membreIdentifier = true;
+        $mailMembre = $infoIdMembre['mail'];
+        $mpdMembre = $infoIdMembre['motDePasse'];
+        //$mailRecuperer = array();
+        $mailRecuperer = MembreDAO::recupererEmail($mailMembre);
+
+        if(empty($mailRecuperer))
+        {
+            $membreIdentifier = false;
+            return $membreIdentifier;
+        }   
+        elseif(!empty($mailRecuperer))
+        {
+            $email = $mailRecuperer['0']['email'];
+            
+            $REQUETE_RECHERCHE_MDP = "SELECT mdp FROM membre WHERE email = '$email'";
+            $rechercherMDP = BaseDeDonnee::getConnexion() -> prepare($REQUETE_RECHERCHE_MDP);
+             $rechercherMDP->execute();
+    
+            $mdpTrouver = $rechercherMDP->fetch();
+            $mdpHache = $mdpTrouver['mdp'];
+            print_r($mdpHache);
+
+            if(password_verify($mpdMembre, $mdpHache))
+            {
+                echo "Ça fonctionne pas";
+            }
+            else
+            {
+                echo "Bienvenue parmi nous!";
+            }
+           
+        }
+        
+
+    }
     public static function validerEmailPasse($email, $passe1, $passe2)
     {
         $resultat = true;
@@ -64,14 +103,13 @@ class MembreDAO{
 
         $listeEmails = MembreDAO::recupererEmail($email);
 
-        print_r($listeEmails);
+        //print_r($listeEmails);
 
         if(!empty($listeEmails))
         {
             $resultat = false;
             return $resultat;
-        }    
-        $resultat = true;
+        }
         return $resultat;
   
     }

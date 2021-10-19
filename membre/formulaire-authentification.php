@@ -1,58 +1,41 @@
 <?php
     include_once "../administration/header-admin.php";
-    
-    session_start();
-   
-    $_SESSION['pseudo'] = "pied";
-    
-    usset($_SESSION['pseudo']);
-
-    $_SESSION['pseudo'] = "pied";
-    //$_SESSION['pseudo'] = NULL;
 ?>
 
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Authentification</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="traitement-authentification.php" method="post">
+                            <h3 class="text-center text-info"></h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Email:</label><br>
+                                <input type="text" name="mail" id="mail" class="form-control" required value="TestMail@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Mot De Passe:</label><br>
+                                <input type="text" name="motDePasse" id="motDePasse" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="inscription.php" class="text-info">Devenez Membre</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
 <?php
-if(!isset($_SESSION['pseudo']))
-{
-
-    print_r($_SESSION['pseudo']);
-    //print_r("tu es inscris");
-    ?><a href='traitement_deconnection.php'>Retour</a><?php
-    //echo "traitement_deconnection.php";
-
-}
-else
-{ 
-?>
-  
-<form method="post" action="membre/traitement-authentification.php">
-
-
-
-<div>
-
-    <label for="pseudo">Pseudo</label>
-
-    <input type="text" id="pseudo" name="pseudo"/>
-
-</div>
-
-<div>
-
-    <label for="passe">Mot de passe</label>
-
-    <input type="password" id="passe" name="passe"/>
-
-</div>
-
-<input type="submit" name="membre-authentification" value="Me connecter" />
-
-
-
-</form>
-<?php
-}
-
 
     include_once "../administration/header-admin.php";
 ?>
