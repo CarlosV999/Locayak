@@ -4,7 +4,7 @@ include_once "../administration/header-admin.php";
 
 <title>Inscription</title>
 <div class="formulaireInscription">
-<form action="membre/traitement-inscription.php" method="post">
+<form action="traitement-inscription.php" method="post">
   <label for="nom">Nom*:</label><br>
   <input type="text" id="nom" name="nom" placeholder="Nom" required ><br>
   

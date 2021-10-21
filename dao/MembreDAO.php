@@ -3,7 +3,8 @@
 require_once  "basededonee.php";
 require_once  "BaseDeDonnee.php";
 
-class MembreDAO{
+class MembreDAO
+{
     public static function listeMembre()
     {
         $SQL_RECUPERER_MEMBRE = "SELECT * FROM `membre`";
@@ -11,6 +12,7 @@ class MembreDAO{
         $requeteSelectKayak->execute();
         return $requeteSelectKayak->fetchAll();
     }
+    /*
     public static function recupererMembre($id)
     {
         $SQL_RECUPERER_MEMBRE = "SELECT * FROM `membre` WHERE id = :id";
@@ -19,7 +21,7 @@ class MembreDAO{
         $requeteSelectMembre->execute();
         return $requeteSelectMembre->fetch();
     }
-
+*/
     public static function ajouterMembre($informationMembre)
     {
         //print_r($informationMembre['mail']);
@@ -38,19 +40,19 @@ class MembreDAO{
         return $requeteAjoutMembre-> execute();
     }
 
-    public static function recupererEmail($email)
+    public static function recupererMembre($email)
     {
         
-        $SQL_RECHERCHER_EMAIL = "SELECT email FROM membre WHERE email LIKE CONCAT('%', :email, '%')";
+        $SQL_RECHERCHER_EMAIL = "SELECT * FROM membre WHERE email LIKE CONCAT('%', :email, '%')";
 
         $rechercherEmail = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
 
         $rechercherEmail->bindParam(':email', $email, PDO::PARAM_STR);
         $rechercherEmail->execute();
 
-        $listeEmails = $rechercherEmail->fetchAll();
-        
-        return $listeEmails;
+        $membreRecuperer = $rechercherEmail->fetch();
+
+        return $membreRecuperer;
     }
 
     public static function validerIdentificationMembre($infoIdMembre)
@@ -58,17 +60,17 @@ class MembreDAO{
         $membreIdentifier = true;
         $mailMembre = $infoIdMembre['mail'];
         $mpdMembre = $infoIdMembre['motDePasse'];
-        //$mailRecuperer = array();
-        $mailRecuperer = MembreDAO::recupererEmail($mailMembre);
 
-        if(empty($mailRecuperer))
+        $membreRecuperer = MembreDAO::recupererMembre($mailMembre);
+
+        if(empty($membreRecuperer))
         {
             $membreIdentifier = false;
             return $membreIdentifier;
         }   
-        elseif(!empty($mailRecuperer))
+        elseif(!empty($membreRecuperer))
         {
-            $email = $mailRecuperer['0']['email'];
+            $email = $membreRecuperer['email'];
             
             $REQUETE_RECHERCHE_MDP = "SELECT mdp FROM membre WHERE email = '$email'";
             $rechercherMDP = BaseDeDonnee::getConnexion() -> prepare($REQUETE_RECHERCHE_MDP);
@@ -76,21 +78,20 @@ class MembreDAO{
     
             $mdpTrouver = $rechercherMDP->fetch();
             $mdpHache = $mdpTrouver['mdp'];
-            print_r($mdpHache);
 
-            if(password_verify($mpdMembre, $mdpHache))
+            if(!password_verify($mpdMembre, $mdpHache))
             {
-                echo "Ça fonctionne pas";
+               $membreIdentifier = false;
+               return $membreIdentifier;
             }
             else
             {
-                echo "Bienvenue parmi nous!";
+                return $membreIdentifier;
             }
            
-        }
-        
-
+        }     
     }
+
     public static function validerEmailPasse($email, $passe1, $passe2)
     {
         $resultat = true;
@@ -101,9 +102,7 @@ class MembreDAO{
             return $resultat;
         }
 
-        $listeEmails = MembreDAO::recupererEmail($email);
-
-        //print_r($listeEmails);
+        $listeEmails = MembreDAO::recupererMembre($email);
 
         if(!empty($listeEmails))
         {

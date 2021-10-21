@@ -13,7 +13,7 @@
                             <h3 class="text-center text-info"></h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Email:</label><br>
-                                <input type="text" name="mail" id="mail" class="form-control" required value="TestMail@gmail.com">
+                                <input type="text" name="mail" id="mail" class="form-control" required >
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Mot De Passe:</label><br>

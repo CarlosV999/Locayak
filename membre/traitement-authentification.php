@@ -9,14 +9,21 @@ $filtreIdMembre['motDePasse'] = FILTER_SANITIZE_STRING;
 $infoIdMembre = filter_input_array(INPUT_POST, $filtreIdMembre);
 
 $validationIdMembre = MembreDAO::validerIdentificationMembre($infoIdMembre);
-//print_r($validationIdMembre);
-if($validationIdMembre == false)
+
+if(!$validationIdMembre)
 {
     echo "Votre identhification n'a pas réussi";
 }
 
-if($validationIdMembre == true)
+if($validationIdMembre)
 {
-    echo "Bienvenue parmi nous!";
+    $sessionMail = $infoIdMembre['mail'];
+    
+    $membreRecuperer = MembreDAO::recupererMembre($sessionMail);
+    
+    $_SESSION['membreEmail'] = $membreRecuperer['email'];
+    $_SESSION['membreId'] = $membreRecuperer['id'];
+ 
+    echo "<li><a href='membre.php'>Aller à votre page maintenant</a></li>";
 }
 

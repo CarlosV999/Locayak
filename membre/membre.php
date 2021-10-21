@@ -1,13 +1,19 @@
 <?php
+require_once "../configuration.php";
+require_once "../administration/header-admin.php";
 require_once "../dao/KayakDAO.php";
 require_once "../dao/MembreDAO.php";
 //Remplacer pour l'id recuperer de la session
-$id = 1;
+$email = $_SESSION['membreEmail'];
+$id = $_SESSION["membreId"];
+
 $listeKayak = KayakDAO::listeKayakPourMembre($id);
-$membre = MembreDAO::recupererMembre($id)[0];
-  include_once "../administration/header-admin.php";
+$membre = MembreDAO::recupererMembre($email);
+
 $nomComplet =$membre['nom']." ".$membre['prenom'];
+
 ?>
+
 <link rel="stylesheet" href="../css/membre.css?<?php echo time(); ?>">
 
 <section>
@@ -48,8 +54,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
 
 <?php
        include_once "../administration/footer-admin.php";
-       ?>
+ ?>
 
 </body>
-
 </html>
