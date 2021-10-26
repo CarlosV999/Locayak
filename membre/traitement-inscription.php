@@ -34,8 +34,8 @@ if($validePasseEmail)
 
     if($reussiteAjoutMembre)
     {
+        header('Location: formulaire-authentification.php');
         echo "BIENVENUE PARMI NOUS' OUBLIER PAS D'INCRIRE VOS KAYAKS SI VOUS VOULEZ EN LOUER!";
-        ?><a href='formulaire-authentification.php'>Retour</a><?php
     }
     else
     {
@@ -45,6 +45,7 @@ if($validePasseEmail)
 }
 else
 {
+    header('Location: inscription.php');
     echo 'Il y a un problème avec le mot de passe ou avec le Pseudo, veuiller recommencer svp.';
 }
 

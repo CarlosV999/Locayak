@@ -5,7 +5,8 @@ require_once "configuration.php";
  include_once "../header";
 ?>
 
-<a href='formulaire-authentification.php'>Retour à la page principale</a>
+
 </body>
 <?php
+header('Location: formulaire-authentification.php');
 include_once "../footer";

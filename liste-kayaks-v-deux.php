@@ -1,5 +1,5 @@
 <?php
-
+require_once "configuration.php";
 require_once "dao/KayakDAO.php";
 $listeKayak = KayakDAO::listeKayak();
 
@@ -31,7 +31,13 @@ require_once "header.php";
         <div class="card-body">
             <h5 class="card-title"><?= $kayak['titreAnnonce']; ?></h5>
             <p class="card-text"><?= $kayak["descriptionAnnonce"];?></p>
-            <a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2">Cliquer pour plus de détail</a>
+            <?php 
+              if(isset($_SESSION["membreId"]))
+              {
+                 ?><a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2">Cliquer pour plus de détail</a><?php
+              }
+           ?>
+            
         </div>
     </div>
 <?php
