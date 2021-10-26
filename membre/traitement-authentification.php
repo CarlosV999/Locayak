@@ -22,7 +22,7 @@ if($validationIdMembre)
     $membreRecuperer = MembreDAO::recupererMembre($sessionMail);
     
     $_SESSION['membreEmail'] = $membreRecuperer['email'];
-    $_SESSION['membreId'] = $membreRecuperer['id'];
+    $_SESSION['idMembre'] = $membreRecuperer['id'];
  
     header('Location: membre.php');
     echo "BIENVENUE PARMI NOUS' OUBLIER PAS D'INCRIRE VOS KAYAKS SI VOUS VOULEZ EN LOUER!";

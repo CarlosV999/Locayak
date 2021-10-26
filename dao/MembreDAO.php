@@ -12,16 +12,7 @@ class MembreDAO
         $requeteSelectKayak->execute();
         return $requeteSelectKayak->fetchAll();
     }
-    /*
-    public static function recupererMembre($id)
-    {
-        $SQL_RECUPERER_MEMBRE = "SELECT * FROM `membre` WHERE id = :id";
-        $requeteSelectMembre = getConnexion()->prepare($SQL_RECUPERER_MEMBRE);
-        $requeteSelectMembre->bindParam(':id', $id, PDO::PARAM_STR);
-        $requeteSelectMembre->execute();
-        return $requeteSelectMembre->fetch();
-    }
-*/
+
     public static function ajouterMembre($informationMembre)
     {
         //print_r($informationMembre['mail']);
@@ -43,7 +34,7 @@ class MembreDAO
     public static function recupererMembre($email)
     {
         
-        $SQL_RECHERCHER_EMAIL = "SELECT * FROM membre WHERE email LIKE CONCAT('%', :email, '%')";
+        $SQL_RECHERCHER_EMAIL = "SELECT * FROM membre WHERE email LIKE CONCAT('%', :email, '%') OR id = :email";
 
         $rechercherEmail = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
 

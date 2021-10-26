@@ -17,7 +17,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="p-3 mb-2 bg-gradient-primary text-white">Mot De Passe:</label><br>
-                                <input type="text" name="motDePasse" id="motDePasse" class="form-control" required>
+                                <input type="password" name="motDePasse" id="motDePasse" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="p-3 mb-2 bg-gradient-primary text-white"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>

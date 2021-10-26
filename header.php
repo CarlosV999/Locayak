@@ -27,7 +27,7 @@
       <li><a href="Acceuil.php">Acceuil</a></li>
       <li><a href="liste-kayaks-v-deux.php">En Location</a></li>
       <?php
-          if(isset($_SESSION["membreId"]))
+          if(isset($_SESSION["idMembre"]))
           {
             echo "<li><a href='membre/membre.php'>Membre</a></li>";
             echo "<li><a href='membre/traitement-deconnection.php'>Déconnection</a></li>";
