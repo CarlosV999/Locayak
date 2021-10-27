@@ -5,7 +5,7 @@ require_once "../dao/KayakDAO.php";
 require_once "../dao/MembreDAO.php";
 //Remplacer pour l'id recuperer de la session
 $email = $_SESSION['membreEmail'];
-$id = $_SESSION["membreId"];
+$id = $_SESSION["idMembre"];
 
 $listeKayak = KayakDAO::listeKayakPourMembre($id);
 $membre = MembreDAO::recupererMembre($email);
@@ -25,16 +25,19 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
         <p>Description : <?= $membre['description'];?></p>
         <p>Région: <?= $membre['adresse'];?></p>
         <p>Ma note : <?= $membre['cote'];?>/10 </p>
+        <a href="ajouter-kayak.php" class="btn btn-secondary">Ajouter Un Kayak</a>
       </div>
     </div>
     <p class="nom">Mes Kayaks</p>
     <div class="mes-kayak">
+    
     <?php
             foreach ($listeKayak as $kayak) {
                 //membreDAO::listeMembre();
                 //$idMembre = $kayak["idMembre"];
                 //print_r($listeMembre);
             ?>
+    
     <div class="card-page-membre" style="width: 22rem;">
         <img class="card-img-top-membre" src="../images/<?= $kayak['image'];?>" alt="Card image cap">
         <div class="card-body">
@@ -46,6 +49,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
 <?php
         }
         ?>
+        <a href="modifierKayak.php?id=<?=$kayak['id']?>">Ajouter Un Kayak</a>
   </div>
   </div>
 

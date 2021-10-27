@@ -1,4 +1,5 @@
 <?php
+require_once "configuration.php";
   include_once "header.php";
 ?>
       <section>
