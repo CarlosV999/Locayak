@@ -52,6 +52,9 @@
     max-width: 150px;
     height: 100px;
   }
+  #text-info{
+    color: #fff;
+  }
   .btn-primary2-membre{
     position: absolute;
     margin-top: 8%;
@@ -59,6 +62,7 @@
     color: #fff;
   }
 
+  
   .groupe-inscription{
     display: flex;  
   }

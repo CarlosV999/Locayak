@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/page-liste.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/stylesheet.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/page-.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/page-annonce.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/stylesheet-chatbox.css?<?php echo time(); ?>">
 </head>
 
@@ -29,8 +30,8 @@
       <?php
           if(isset($_SESSION["idMembre"]))
           {
-            echo "<li><a href='membre/membre.php'>Membre</a></li>";
-            echo "<li><a href='membre/traitement-deconnection.php'>Déconnection</a></li>";
+            echo "<li><a href='membre/membre.php'>Mon Compte</a></li>";
+            echo "<li><a href='membre/traitement-deconnexion.php'>Déconnexion</a></li>";
           }
           else
           {

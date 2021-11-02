@@ -36,12 +36,12 @@ class MembreDAO
         
         $SQL_RECHERCHER_EMAIL = "SELECT * FROM membre WHERE email LIKE CONCAT('%', :email, '%') OR id = :email";
 
-        $rechercherEmail = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
+        $rechercherInfo = BaseDeDonnee::getConnexion() -> prepare($SQL_RECHERCHER_EMAIL);
 
-        $rechercherEmail->bindParam(':email', $email, PDO::PARAM_STR);
-        $rechercherEmail->execute();
+        $rechercherInfo->bindParam(':email', $email, PDO::PARAM_STR);
+        $rechercherInfo->execute();
 
-        $membreRecuperer = $rechercherEmail->fetch();
+        $membreRecuperer = $rechercherInfo->fetch();
 
         return $membreRecuperer;
     }

@@ -28,7 +28,8 @@ class KayakDAO{
     public static function ajouterKayak($informationKayak,$image)
     {
           
-        $MESSAGE_SQL_AJOUTER_JEU = "INSERT INTO kayak (titreAnnonce,descriptionAnnonce,type,adresse,cout,idMembre,image) VALUES (:titreAnnonce,:descriptionAnnonce,:type, :adresse,:cout,:idMembre,'$image')";
+        $MESSAGE_SQL_AJOUTER_JEU = "INSERT INTO kayak (titreAnnonce,descriptionAnnonce,type,adresse,cout,idMembre,dateDebutDisponibiliter,dateFinDisponibiliter,image) 
+                                    VALUES (:titreAnnonce,:descriptionAnnonce,:type, :adresse,:cout,:idMembre,:dateDebutDisponibiliter,:dateFinDisponibiliter,'$image')";
         $requeteAjoutKayak = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_JEU); 
 
         $requeteAjoutKayak->bindParam(':titreAnnonce', $informationKayak['titreAnnonce'], PDO::PARAM_STR);
@@ -36,7 +37,9 @@ class KayakDAO{
         $requeteAjoutKayak->bindParam(':type', $informationKayak['type'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':adresse', $informationKayak['adresse'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':cout', $informationKayak['cout'], PDO::PARAM_STR);
-        $requeteAjoutKayak->bindParam(':idMembre', $informationKayak['idmembre'], PDO::PARAM_STR);
+        $requeteAjoutKayak->bindParam(':idMembre', $informationKayak['idMembre'], PDO::PARAM_STR);
+        $requeteAjoutKayak->bindParam(':dateDebutDisponibiliter', $informationKayak['dateDebutDisponibiliter'], PDO::PARAM_STR);
+        $requeteAjoutKayak->bindParam(':dateFinDisponibiliter', $informationKayak['dateFinDisponibiliter'], PDO::PARAM_STR);
         return $requeteAjoutKayak-> execute();
     }
 
