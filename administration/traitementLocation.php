@@ -14,7 +14,6 @@ $informationLocation= filter_input_array(INPUT_GET, $filtresKayak);
 
 print_r($informationLocation);
 $reussiteAjout = LocationDAO::ajouterLocation($informationLocation);
-
 if($reussiteAjout){
    
     echo "Ajout Reussi";
