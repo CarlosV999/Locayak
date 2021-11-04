@@ -31,8 +31,8 @@
       <?php
           if(isset($_SESSION["idMembre"]))
           {
-            echo "<li><a href='../membre/membre.php'>Membre</a></li>";
-            echo "<li><a href='../membre/traitement-deconnection.php'>Déconnection</a></li>";
+            echo "<li><a href='../membre/membre.php'>Mon Compte</a></li>";
+            echo "<li><a href='../membre/traitement-deconnexion.php'>Déconnexion</a></li>";
           }
           else
           {

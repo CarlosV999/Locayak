@@ -2,8 +2,16 @@
 require_once "../dao/KayakDAO.php";
 
     require_once "header-admin.php";
-?>
+    $dateActuel= date("Y-m-d");
+    $maxChoix = date('Y-m-d', strtotime('+2 month'));
+    $maxChoixDebut = date('Y-m-d', strtotime('+1 month'));
+    $finMin = date('Y-m-d', strtotime('+2 day'));
 
+?>
+<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="../scripts/jquery-3.6.0.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src="../scripts/dates.js?<?php echo time(); ?>"></script>
 <title>Ajouter votre Kayak</title>
 <body>
 <div class="container">
@@ -11,8 +19,8 @@ require_once "../dao/KayakDAO.php";
     <h3>Votre Kayak</h3>
     <h4>Entre les information de votre Kayak</h4>
     <fieldset>
-      <label for="titre">Titre de votre annonce</label>
-      <input placeholder="Titre" id="titreAnnonce" name="titre" type="text" tabindex="1" required autofocus>
+      <label for="titreAnnonce">Titre de votre annonce</label>
+      <input placeholder="Titre" id="titreAnnonce" name="titreAnnonce" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
       <label for="descriptionAnnonce">Description de voter annonce</label>
@@ -36,10 +44,17 @@ require_once "../dao/KayakDAO.php";
       <label for="illustration">Illustration</label></br>
       <input type="file" id="illustration" name="illustration" required>
     </fieldset>
+    
+    </br>
+    <fieldset>
+      <p>Debut des disponibilité: <input type = "text" onblur="validerDate();" name="dateDebutDisponibiliter" id = "dateDebutDisponibiliter"></p>
+      <p>Fin des disponibilité: <input type = "text" onblur="validerDate();" name="dateFinDisponibiliter" id = "dateFinDisponibiliter"></p>
+      </fieldset>
+      </br>
     <fieldset>
       <button type="submit" id="envoyer-ajout">Terminer</button>
     </fieldset>
   </form>
-</body>
-
+</br>
+</body> 
 </html>

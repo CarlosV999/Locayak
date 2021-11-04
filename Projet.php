@@ -5,8 +5,8 @@
 <body>
 
       <section>
-        <div class="Projet">
-          <p class="message-explication-projet">
+        <div class="zone-bienvenue">
+          <p class="message-bienvenue">
             Bonjour,<br>
             <br>
             Ce site de location de kayak est un projet web transactionnel

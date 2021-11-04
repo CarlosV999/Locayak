@@ -7,13 +7,18 @@ $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 if(isset($_SESSION['idMembre']))
 {
   $membrePresent = $_SESSION['idMembre'];
+  /*print_r($membrePresent);
+  print_r("::______::");
+  print_r($_SESSION['membreEmail']);
+  print_r("::______::");
+  */
 }
 
 //$email = ;
 $kayak = KayakDAO::selectionnerKayak($id);
 $membre = MembreDAO::recupererMembre($kayak['idMembre']);
 //print_r($_GET);
-//print_r($membre);
+//print_r($kayak['idMembre']);
 ?>
 
 <title>Annonce</title>
@@ -36,7 +41,7 @@ $membre = MembreDAO::recupererMembre($kayak['idMembre']);
             <?php 
                 if(isset($_SESSION['idMembre']))
                 {
-                  if($membrePresent == $membre['id'])
+                  if($membrePresent == $kayak['idMembre'])
                   {
                     ?>
                         <a href="modifier-kayak.php"  class="btn btn-secondary center">Modifier Ce Kayak</a>

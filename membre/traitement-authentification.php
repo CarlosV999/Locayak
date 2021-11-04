@@ -25,6 +25,6 @@ if($validationIdMembre)
     $_SESSION['idMembre'] = $membreRecuperer['id'];
  
     header('Location: membre.php');
-    echo "BIENVENUE PARMI NOUS' OUBLIER PAS D'INCRIRE VOS KAYAKS SI VOUS VOULEZ EN LOUER!";
+    //echo "BIENVENUE PARMI NOUS' OUBLIER PAS D'INCRIRE VOS KAYAKS SI VOUS VOULEZ EN LOUER!";
 }
 

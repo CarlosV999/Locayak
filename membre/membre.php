@@ -49,7 +49,6 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
 <?php
         }
         ?>
-        <a href="modifierKayak.php?id=<?=$kayak['id']?>">Ajouter Un Kayak</a>
   </div>
   </div>
 

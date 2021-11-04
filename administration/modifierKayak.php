@@ -8,6 +8,10 @@ $kayak = KayakDAO::selectionnerKayak($id);
 
 <title>Modifier votre Kayak</title>
 <body>
+<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="../scripts/jquery-3.6.0.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src="../scripts/dates.js?<?php echo time(); ?>"></script>
 <div class="container">
     <form action="traitement_modifier_kayak.php" method="post" enctype="multipart/form-data">
     <h3>Votre Kayak</h3>
@@ -55,6 +59,12 @@ $kayak = KayakDAO::selectionnerKayak($id);
       <label for="illustration">Illustration</label></br>
       <input type="file" id="illustration" name="illustration">
     </fieldset>
+    <fieldset>
+      <p>Debut des disponibilité: <input type = "text" onblur="validerDate();" id = "dateDebutDisponibiliter"></p>
+      <p>Fin des disponibilité: <input type = "text" onblur="validerDate();" id = "dateFinDisponibiliter"></p>
+      </fieldset>
+      </br>
+    <fieldset>
     <fieldset>
       <button type="submit" id="envoyer-ajout">Terminer</button>
     </fieldset>

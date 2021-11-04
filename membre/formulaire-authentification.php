@@ -20,11 +20,10 @@
                                 <input type="password" name="motDePasse" id="motDePasse" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="remember-me" class="p-3 mb-2 bg-gradient-primary text-white"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
                             </div>
                             <div id="register-link" class="text-right">
-                                <a href="inscription.php" class="p-3 mb-2 bg-gradient-primary text-white">Devenez Membre</a>
+                                <a href="inscription.php" class="btn btn-secondary">Devenez Membre</a>
                             </div>
                         </form>
                     </div>

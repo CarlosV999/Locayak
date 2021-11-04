@@ -31,13 +31,7 @@ require_once "header.php";
         <div class="card-body">
             <h5 class="card-title"><?= $kayak['titreAnnonce']; ?></h5>
             <p class="card-text"><?= $kayak["descriptionAnnonce"];?></p>
-            <?php 
-              if(isset($_SESSION["idMembre"]))
-              {
-                 ?><a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2">Cliquer pour plus de détail</a><?php
-              }
-           ?>
-            
+            <a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2">Cliquer pour plus de détail</a>
         </div>
     </div>
 <?php
