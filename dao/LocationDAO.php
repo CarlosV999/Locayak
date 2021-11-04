@@ -6,7 +6,6 @@ class LocationDAO{
         $MESSAGE_SQL_AJOUTER_JEU = "INSERT INTO location (idClient,idLocateur,idKayak,dateTransac,dateDebutLocation,dateFinLocation) 
                                     VALUES (:idClient,:idLocateur,:idKayak,:dateTransac,:dateDebutLocation,:dateFinLocation)";
         $requeteAjoutKayak = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_JEU); 
-        echo($informationLocation['idKayak']);
         $requeteAjoutKayak->bindParam(':idClient', $informationLocation['idClient'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':idLocateur', $informationLocation['idLocateur'], PDO::PARAM_STR);
         $requeteAjoutKayak->bindParam(':idKayak', $informationLocation['idKayak'], PDO::PARAM_STR);
