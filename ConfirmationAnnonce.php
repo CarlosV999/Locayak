@@ -108,7 +108,6 @@ onApprove: function(data, actions) {
         url += "&dateFinLocation="+ date2Confirmation;
         window.location.replace(url);
         //alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
     // When ready to go live, remove the alert and show a success message within this page. For example:
     // var element = document.getElementById('paypal-button-container');
     // element.innerHTML = '';
