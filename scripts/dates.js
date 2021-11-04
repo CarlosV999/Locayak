@@ -14,10 +14,8 @@ $(document).ready(function() {
 
 //Lors de la selection de la date
 $("#dateDebutDisponibiliter").datepicker({
-  
   maxDate: '+2m',
   minDate: d,
-  
   onSelect: function(dateText, inst) {
     var dateObject = $("#dateDebutDisponibiliter").datepicker('getDate');
     let datePourDebutFin = new Date(dateObject);
