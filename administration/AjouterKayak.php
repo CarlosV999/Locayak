@@ -54,6 +54,7 @@ require_once "../dao/KayakDAO.php";
     <fieldset>
       <button type="submit" id="envoyer-ajout">Terminer</button>
     </fieldset>
+    
   </form>
 </br>
 </body> 
