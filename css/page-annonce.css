@@ -1,19 +1,18 @@
 .kayak > .resume{
     
-    background-color:aquamarine;
-    width: 50%;
-    height: 15%;
-    bottom: 20%;
-    left: 22%;
+  background-color:aquamarine;
+  width: 50%;
+  height: 15%;
+  bottom: 20%;
+  left: 22%;
 }
 
 .kayak > .info-kayak{ 
-  display: flex;
-  justify-content: center;
-  color:white;
-  font-size: 20px;
+display: flex;
+justify-content: center;
+color:white;
+font-size: 20px;
 }
-
 .kayak > .info-titre{  
   display: flex;
   justify-content: center;
