@@ -26,6 +26,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
         <p>Région: <?= $membre['adresse'];?></p>
         <p>Ma note : <?= $membre['cote'];?>/10 </p>
         <a href="ajouter-kayak.php" class="btn btn-secondary">Ajouter Un Kayak</a>
+        <a href="modifier-membre.php" class="btn btn-secondary">Modifier votre Utilisateur</a>
       </div>
     </div>
     <p class="nom">Mes Kayaks</p>

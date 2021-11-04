@@ -31,6 +31,19 @@ class MembreDAO
         return $requeteAjoutMembre-> execute();
     }
 
+    public static function modifierPrenom($informationMembre,$id)
+    {
+        //print_r($informationMembre['mail']);
+
+        $MESSAGE_SQL_AJOUTER_MEMBRE = "UPDATE membre SET prenom=:prenom WHERE id=:id";
+
+        $requeteAjoutMembre = BaseDeDonnee::getConnexion() -> prepare($MESSAGE_SQL_AJOUTER_MEMBRE); 
+
+        $requeteAjoutMembre->bindParam(':prenom', $informationMembre['prenom'], PDO::PARAM_STR);
+        $requeteAjoutMembre->bindParam(':id',$id, PDO::PARAM_STR);
+        return $requeteAjoutMembre-> execute();
+    }
+
     public static function recupererMembre($email)
     {
         
