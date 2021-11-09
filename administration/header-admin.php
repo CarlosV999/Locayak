@@ -36,11 +36,11 @@
           }
           else
           {
-            echo "<li><a href='../membre/formulaire-authentification.php'>Identifier vous</a></li>";
-            echo "<li><a href='../membre/inscription.php'>Pas de compte? Inscriver vous</a></li>";
+            echo "<li><a href='../membre/formulaire-authentification.php'>Identifiez vous</a></li>";
+            echo "<li><a href='../membre/inscription.php'>Pas de compte? Inscrivez vous</a></li>";
           }
       ?>
-      <li><a href="../Projet.php">A propos</a></li>
+      <li><a href="../Projet.php">À propos</a></li>
       <li><a href="#">Messagerie</a></li>
     </ul> 
   <script src="../scripts/menu.js"></script>
