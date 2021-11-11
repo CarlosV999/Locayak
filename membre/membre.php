@@ -1,8 +1,8 @@
 <?php
 require_once "../configuration.php";
 require_once "../administration/header-admin.php";
-require_once "../dao/KayakDAO.php";
-require_once "../dao/MembreDAO.php";
+require_once CHEMIN_DAO."KayakDAO.php";
+require_once CHEMIN_DAO."MembreDAO.php";
 //Remplacer pour l'id recuperer de la session
 $email = $_SESSION['membreEmail'];
 $id = $_SESSION["idMembre"];
@@ -26,6 +26,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
         <p>Région: <?= $membre['adresse'];?></p>
         <p>Ma note : <?= $membre['cote'];?>/10 </p>
         <a href="ajouter-kayak.php" class="btn btn-secondary">Ajouter Un Kayak</a>
+        <a href="liste-transaction.php" class="btn btn-secondary">Voir Mes Transactions</a>
         <a href="modifier-membre.php" class="btn btn-secondary">Modifier votre Utilisateur</a>
       </div>
     </div>

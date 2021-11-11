@@ -14,4 +14,12 @@ class LocationDAO{
         $requeteAjoutKayak->bindParam(':dateFinLocation', $informationLocation['dateFinLocation'], PDO::PARAM_STR);
         return $requeteAjoutKayak-> execute();
     }
+
+    public static function listeTransaction()
+    {
+        $MESSAGE_SQL_RECUPERER = "SELECT * FROM `location`";
+        $requeteSelectTransaction = BaseDeDonnee::getConnexion()->prepare($MESSAGE_SQL_RECUPERER);
+        $requeteSelectTransaction->execute();
+        return $requeteSelectTransaction->fetchAll();
+    }
 }
