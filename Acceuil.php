@@ -1,4 +1,8 @@
 <?php
+include "poc/traduction/config.php";
+?>
+
+<?php
 require_once "configuration.php";
 //require_once CHEMIN_DAO."LocationDAO.php";
 //require_once CHEMIN_DAO."KayakDAO.php";
@@ -12,7 +16,9 @@ $id = $_SESSION["idMembre"];
 $listeKayak = KayakDAO::listeKayakPourMembre($id);
 $membre = MembreDAO::recupererMembre($email);
 */
+//include "poc/traduction/config.php";
 ?>
+
 
       <section>
         <div class="zone-bienvenue">
