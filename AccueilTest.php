@@ -1,38 +1,32 @@
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acceuil</title>
-  <link rel="stylesheet" href="css/stylesheet.css">
-</head>
-<body>
-    <div class="header">
-        <h1>LoCayak</h1>   
-        <ul>
-            <li><a href="#">Acceuil</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Membre</a></li>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Messagerie</a></li>
-          </ul>
-      </div>
-     
-      <footer role="contentinfo" class="footer">
-        <div class="">
-          <div class="">
-            <section class="">
-              <div class="">
-                <h3 class="">À propos</h3>
-              </div>
-              <ul class="">
-                <li class="">
-                  <a href="" class="">Comment fonctionne LoCayak</a>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </footer>
+<?php
+require_once "configuration.php";
+//require_once CHEMIN_DAO."LocationDAO.php";
+//require_once CHEMIN_DAO."KayakDAO.php";
+//require_once CHEMIN_DAO."MembreDAO.php";
+include_once "header.php";
+//Remplacer pour l'id recuperer de la session
+/*
+$email = $_SESSION['membreEmail'];
+$id = $_SESSION["idMembre"];
+
+$listeKayak = KayakDAO::listeKayakPourMembre($id);
+$membre = MembreDAO::recupererMembre($email);
+*/
+//include "poc/traduction/config.php";
+
+?>
+
+
+      <section>
+      <script type="text/javascript" src="lib/Ajax.js"></script>
+      <script type="text/javascript" src="scripts/carrousel.js"></script>
+      <button id="ajaxButton" type="button">Faire une requête</button>
+
+      
+
+      <?php
+       include_once "footer.php";
+       ?>     
 
  </body>
 </html>
