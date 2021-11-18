@@ -1,8 +1,4 @@
 <?php
-include "poc/traduction/config.php";
-?>
-
-<?php
 require_once "configuration.php";
 //require_once CHEMIN_DAO."LocationDAO.php";
 //require_once CHEMIN_DAO."KayakDAO.php";
@@ -17,14 +13,26 @@ $listeKayak = KayakDAO::listeKayakPourMembre($id);
 $membre = MembreDAO::recupererMembre($email);
 */
 //include "poc/traduction/config.php";
+
+putenv("LANG=$locale");
+putenv("LANGUAGE=$locale");
+
+setlocale(LC_ALL, $locale);
+
+$domain = 'messages';
+
+textdomain($domain);
+
+bindtextdomain($domain, 'poc\traduction\locale');
+
+bind_textdomain_codeset($domain, 'UTF-8');
 ?>
 
 
       <section>
         <div class="zone-bienvenue">
           <p class="message-bienvenue">
-            Bonjour et bienvenue chez Locayak, le site où vous pouvez
-            louer un kayak, ou mettre votre kayak en location !
+           <?= _('Bonjour et bienvenue chez Locayak, le site où vous pouvez louer un kayak, ou mettre votre kayak en location !') ?>
           </p>
         </div>
       </section>
