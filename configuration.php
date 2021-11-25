@@ -5,7 +5,7 @@ define("CHEMIN_DAO",$_SERVER['DOCUMENT_ROOT']."/DevoirTransactionnel/dao/");
 
 //TRADUCTION
 
-$locale = "en_CA";
+$locale = "en_US.utf8";
 
 $racine = "/var/www/html/DevoirTransactionnel/poc/traduction/locales";
 $domaine = "messages";

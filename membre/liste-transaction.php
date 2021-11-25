@@ -21,10 +21,10 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
 <section>
   <div id="zone-membre-global">
     <div id="zone-membre-info">
-        <a href="membre.php" class="btn btn-secondary">Retour à Mon Profil</a>
+        <a href="membre.php" class="btn btn-secondary"><?= _('Retour à Mon Profil')?></a>
       </div>
     </div>
-    <p class="nom">Mes Kayaks</p>
+    <p class="nom"><?= _('Mes Kayaks')?></p>
     <div class="mes-kayak">
     
     <?php
@@ -40,9 +40,9 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
               <h5 class="card-title"><?=$kayak['titreAnnonce']; ?></h5>
               <img class="card-img-top-membre" src="../images/<?= $kayak['image'];?>" alt="Card image cap">
               <div class="card-body">
-              <p>Coût de la transaction est de <?= $kayak['cout'];?> </p>
-              <a href="" class="">Détail de la Transaction</a> </br>
-              <a href="chat-membre.php?idLocateur=<?=$transaction[2];?>&kayak=<?=$kayak['id'];?>&idLocation=<?=$transaction[0];?>" class="">Aller au Chat</a>
+              <p><?= _('Coût de la transaction est de')?> <?= $kayak['cout'];?> <?= _('$')?> </p>
+              <a href="" class=""><?= _('Détails de la Transaction')?></a> </br>
+              <a href="chat-membre.php?idLocateur=<?=$transaction[2];?>&kayak=<?=$kayak['id'];?>&idLocation=<?=$transaction[0];?>" class=""><?= _('Aller au Chat')?></a>
             </div>
           </div>
               

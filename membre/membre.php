@@ -22,15 +22,15 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
       <img src="../images/DefaultProfile.png" alt="Votre image de profile" id="image-profile">
       <div id="zone-membre-text">
         <p class="nom"><?= $nomComplet;?></p>
-        <p>Description : <?= $membre['description'];?></p>
-        <p>Région: <?= $membre['adresse'];?></p>
-        <p>Ma note : <?= $membre['cote'];?>/10 </p>
-        <a href="ajouter-kayak.php" class="btn btn-secondary">Ajouter Un Kayak</a>
-        <a href="liste-transaction.php" class="btn btn-secondary">Voir Mes Transactions</a>
-        <a href="modifier-membre.php" class="btn btn-secondary">Modifier votre Utilisateur</a>
+        <p><?= _('Description : ')?><?= $membre['description'];?></p>
+        <p><?= _('Région: ')?><?= $membre['adresse'];?></p>
+        <p><?= _('Ma note : ')?><?= $membre['cote'];?><?= _('/10')?> </p>
+        <a href="ajouter-kayak.php" class="btn btn-secondary"><?= _('Ajouter un kayak')?></a>
+        <a href="liste-transaction.php" class="btn btn-secondary"><?= _('Voir mes transactions')?></a>
+        <a href="modifier-membre.php" class="btn btn-secondary"><?= _('Modifier votre utilisateur')?></a>
       </div>
     </div>
-    <p class="nom">Mes Kayaks</p>
+    <p class="nom"><?= _('Mes kayaks')?></p>
     <div class="mes-kayak">
     
     <?php
@@ -45,7 +45,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
         <div class="card-body">
             <h5 class="card-title"><?= $kayak['titreAnnonce']; ?></h5>
             <p class="card-text"><?= $kayak["descriptionAnnonce"];?></p>
-            <a href="../Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2-membre">Détail</a>
+            <a href="../Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2-membre"><?= _('détail')?></a>
         </div>
     </div>
 <?php
