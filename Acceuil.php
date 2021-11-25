@@ -14,18 +14,7 @@ $membre = MembreDAO::recupererMembre($email);
 */
 //include "poc/traduction/config.php";
 
-putenv("LANG=$locale");
-putenv("LANGUAGE=$locale");
 
-setlocale(LC_ALL, $locale);
-
-$domain = 'messages';
-
-textdomain($domain);
-
-bindtextdomain($domain, 'poc\traduction\locale');
-
-bind_textdomain_codeset($domain, 'UTF-8');
 ?>
 
 

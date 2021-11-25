@@ -3,14 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Acceuil</title>
-
+  <script></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css?<?php echo time(); ?>" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/menu.css?<?php echo time(); ?>">
-  <link rel="stylesheet" href="css/liste-kayak-admin.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/page-liste.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/stylesheet.css?<?php echo time(); ?>">
-  <link rel="stylesheet" href="css/page-.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/page-annonce.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/stylesheet-chatbox.css?<?php echo time(); ?>">
 </head>
@@ -35,8 +33,8 @@
           }
           else
           {
-            echo "<li><a href='membre/formulaire-authentification.php'>Identifier vous</a></li>";
-            echo "<li><a href='membre/inscription.php'>Pas de compte? Inscriver vous</a></li>";
+            echo "<li><a href='membre/formulaire-authentification.php'>Identifiez vous</a></li>";
+            echo "<li><a href='membre/inscription.php'>Pas de compte? Inscrivez vous</a></li>";
           }
       ?>
       <li><a href="Projet.php">A propos</a></li>

@@ -31,7 +31,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
             foreach ($listeTransaction as $transaction)
              {
 
-            if($id == $transaction[1])
+            if($id == $transaction[1] ||$id == $transaction[2])
             
             {
               $kayak = KayakDAO::selectionnerKayak($transaction[3]);
@@ -41,7 +41,8 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
               <img class="card-img-top-membre" src="../images/<?= $kayak['image'];?>" alt="Card image cap">
               <div class="card-body">
               <p>Coût de la transaction est de <?= $kayak['cout'];?> </p>
-              <a href="" class="btn btn-primary2-membre">Détail de la Transaction</a>
+              <a href="" class="">Détail de la Transaction</a> </br>
+              <a href="chat-membre.php?idLocateur=<?=$transaction[2];?>&kayak=<?=$kayak['id'];?>&idLocation=<?=$transaction[0];?>" class="">Aller au Chat</a>
             </div>
           </div>
               

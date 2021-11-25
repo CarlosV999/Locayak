@@ -1,4 +1,4 @@
-(function() {
+function() {
   var httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
 
@@ -23,4 +23,4 @@
       }
     }
   }
-})();
+}();

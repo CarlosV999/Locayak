@@ -50,27 +50,27 @@ require_once CHEMIN_DAO."MembreDAO.php";
         <input type="submit" value="Payer" />
       </form> -->
       <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
-      <!-- <button onclick="testUrl()">Faux Bouton de paiement</button> -->
+      <button onclick="testUrl()">Faux Bouton de paiement</button>
 <!-- Set up a container element for the button -->
 <div id="paypal-button-container"></div>
 
 <script>
   function testUrl(){
-//     var url = "administration/traitementLocation.php";
+    var url = "administration/traitementLocation.php";
 
-// var xhr = new XMLHttpRequest();
-// xhr.open("POST", url);
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
 
-// var data = `{
-//   "idClient":` +<?=$kayak["idMembre"]; ?>+`,
-//   "idLocateur": ` +<?=$_SESSION['idMembre']; ?>+`,
-//   "dateTransac":` +new Date()+`,
-//   "dateDebutLocation": ` +date1Confirmation+`,
-//   "dateFinLocation": ` +date2Confirmation+`
-// }`;
+var data = `{
+  "idClient":` +<?=$kayak["idMembre"]; ?>+`,
+  "idLocateur": ` +<?=$_SESSION['idMembre']; ?>+`,
+  "dateTransac":` +new Date()+`,
+  "dateDebutLocation": ` +date1Confirmation+`,
+  "dateFinLocation": ` +date2Confirmation+`
+}`;
 
-// xhr.send(data);
-//window.location.replace(url);
+xhr.send(data);
+window.location.replace(url);
     var url = "administration/traitementLocation.php";
             url += "?idClient="+<?=$kayak["idMembre"]; ?>;
             url += "&idLocateur="+<?=$_SESSION['idMembre']; ?>;
