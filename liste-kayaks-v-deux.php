@@ -8,10 +8,10 @@ require_once "header.php";
 
 <div class="barre-recherche">
   <div class="form-outline">
-    <input type="search" id="form1" class="form-control" placeholder="Votre recherche" />
+    <input type="search" id="form1" class="form-control" placeholder="<?= _('Votre recherche')?>" />
   </div>
   <button type="button" class="btn btn-primary">
-    <i>Recherche</i>
+    <i><?= _('Recherche')?></i>
   </button>
 </div>
 </br>
@@ -31,7 +31,7 @@ require_once "header.php";
         <div class="card-body">
             <h5 class="card-title"><?= $kayak['titreAnnonce']; ?></h5>
             <p class="card-text"><?= $kayak["descriptionAnnonce"];?></p>
-            <a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2">Cliquer pour plus de détail</a>
+            <a href="Annonce.php?id=<?php echo $kayak['id']; ?>" class="btn btn-primary2"><?= _('Cliquez pour plus de détails')?></a>
         </div>
     </div>
 <?php

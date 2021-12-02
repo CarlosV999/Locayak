@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-23 09:14-0500\n"
-"PO-Revision-Date: 2021-11-23 09:24-0500\n"
+"POT-Creation-Date: 2021-12-02 15:45-0500\n"
+"PO-Revision-Date: 2021-12-02 16:16-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_CA\n"
@@ -12,25 +12,44 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ../../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: poc/traduction/Acceuil.php\n"
-"X-Poedit-SearchPath-1: .\n"
-"X-Poedit-SearchPath-2: membre/ajouter-kayak.php\n"
+"X-Poedit-SearchPath-0: membre/ajouter-kayak.php\n"
+"X-Poedit-SearchPath-1: membre/chat-membre.php\n"
+"X-Poedit-SearchPath-2: membre/configuration.php\n"
 "X-Poedit-SearchPath-3: membre/formulaire-authentification.php\n"
 "X-Poedit-SearchPath-4: membre/inscription.php\n"
 "X-Poedit-SearchPath-5: membre/liste-transaction.php\n"
 "X-Poedit-SearchPath-6: membre/membre.php\n"
 "X-Poedit-SearchPath-7: membre/modifier-membre.php\n"
-"X-Poedit-SearchPath-8: Annonce.php\n"
-"X-Poedit-SearchPath-9: ConfirmationAnnonce.php\n"
-"X-Poedit-SearchPath-10: confirmationInscription.php\n"
-"X-Poedit-SearchPath-11: confirmation-Paiement.php\n"
-"X-Poedit-SearchPath-12: footer.php\n"
-"X-Poedit-SearchPath-13: header.php\n"
-"X-Poedit-SearchPath-14: liste-kayaks-v-deux.php\n"
-"X-Poedit-SearchPath-15: Page-chat.php\n"
-"X-Poedit-SearchPath-16: Projet.php\n"
+"X-Poedit-SearchPath-8: membre/supprimer-kayak.php\n"
+"X-Poedit-SearchPath-9: membre/traitement-ajouter-kayak.php\n"
+"X-Poedit-SearchPath-10: membre/traitement-ajouter-message.php\n"
+"X-Poedit-SearchPath-11: membre/traitement-authentification.php\n"
+"X-Poedit-SearchPath-12: membre/traitement-deconnexion.php\n"
+"X-Poedit-SearchPath-13: membre/traitement-inscription.php\n"
+"X-Poedit-SearchPath-14: membre/traitement-modifier-utilisateur.php\n"
+"X-Poedit-SearchPath-15: membre/traitement-recuperer-message.php\n"
+"X-Poedit-SearchPath-16: membre/traitement-supprimer-kayak.php\n"
+"X-Poedit-SearchPath-17: Acceuil.php\n"
+"X-Poedit-SearchPath-18: AccueilTest.php\n"
+"X-Poedit-SearchPath-19: Annonce.php\n"
+"X-Poedit-SearchPath-20: configuration.php\n"
+"X-Poedit-SearchPath-21: ConfirmationAnnonce.php\n"
+"X-Poedit-SearchPath-22: confirmationInscription.php\n"
+"X-Poedit-SearchPath-23: confirmation-Paiement.php\n"
+"X-Poedit-SearchPath-24: demo-liste.html\n"
+"X-Poedit-SearchPath-25: footer.php\n"
+"X-Poedit-SearchPath-26: header.php\n"
+"X-Poedit-SearchPath-27: liste-kayaks.php\n"
+"X-Poedit-SearchPath-28: liste-kayaks-v-deux.php\n"
+"X-Poedit-SearchPath-29: log-chat.php\n"
+"X-Poedit-SearchPath-30: Menu.php\n"
+"X-Poedit-SearchPath-31: Page-chat.php\n"
+"X-Poedit-SearchPath-32: post.php\n"
+"X-Poedit-SearchPath-33: Projet.php\n"
+"X-Poedit-SearchPath-34: README.md\n"
+"X-Poedit-SearchPath-35: test.php\n"
 
-#: Acceuil.php:23 poc/traduction/Acceuil.php:36
+#: Acceuil.php:23
 msgid ""
 "Bonjour et bienvenue chez Locayak, le site où vous pouvez louer un kayak, ou "
 "mettre votre kayak en location !"
@@ -38,65 +57,69 @@ msgstr ""
 "Hello and welcome to Locayak, the site where you can rent a kayak, or rent "
 "your kayak!"
 
-#: Annonce.php:24
-msgid "Annonce"
-msgstr "Rental"
-
 #: Annonce.php:31
 msgid "Propriétaire : "
 msgstr "Owner :"
 
 #: Annonce.php:32
 msgid "Cote propriétaire : "
-msgstr "Owner rating: "
-
-#: Annonce.php:32
-msgid "/10"
-msgstr "/10"
+msgstr "Owner rating:"
 
 #: Annonce.php:33
 msgid "Prix/jours : "
-msgstr "Price/days: "
-
-#: Annonce.php:33
-msgid "$/jours"
-msgstr "$/days : "
+msgstr "Price/Day :"
 
 #: Annonce.php:34
-msgid "Vacant ? OUI"
-msgstr "Vacant? YES"
+msgid "Vacant ?"
+msgstr "Available ?"
+
+#: Annonce.php:34
+msgid "OUI"
+msgstr "YES"
 
 #: Annonce.php:35
-msgid "Région : Matanie"
-msgstr "Region : Matanie"
+msgid "Région :"
+msgstr "Region :"
+
+#: Annonce.php:35
+msgid "Matanie"
+msgstr "Matanie"
 
 #: Annonce.php:47
-msgid "Modifier Ce Kayak"
-msgstr "Modify this kayak"
+msgid "Modifier ce Kayak"
+msgstr "Edit this Kayak"
 
 #: Annonce.php:48
-msgid "Supprimer Ce Kayak"
-msgstr "Delete this kayak"
+msgid "Supprimer ce Kayak"
+msgstr "Delete this Kayak"
 
 #: Annonce.php:53
-msgid "Louer Ce Kayak"
-msgstr "Rent this kayak"
+msgid "Louer ce Kayak"
+msgstr "Rent this Kayak"
 
 #: ConfirmationAnnonce.php:29
-msgid "Confirmer Votre reservation"
-msgstr "Confirm Your Booking"
+msgid "Confirmer votre réservation"
+msgstr "Confirm your reservation"
 
 #: ConfirmationAnnonce.php:34
-msgid "$"
+msgid " $ "
 msgstr "$"
 
 #: ConfirmationAnnonce.php:36 membre/ajouter-kayak.php:54
 msgid "Début des disponibilités: "
-msgstr "Start of availability :"
+msgstr "Start of availability:"
+
+#: ConfirmationAnnonce.php:37
+msgid "Fin des disponibilité: "
+msgstr "End of availability:"
 
 #: ConfirmationAnnonce.php:39
 msgid "Prix total: "
-msgstr "Total price :"
+msgstr "Total price:"
+
+#: ConfirmationAnnonce.php:53
+msgid "Faux Bouton de paiement"
+msgstr "Fake payment button"
 
 #: Page-chat.php:9
 msgid "Bienvenue, "
@@ -119,7 +142,7 @@ msgstr ""
 
 #: Projet.php:11
 msgid "Éric Pelletier"
-msgstr "Éric Pelletier"
+msgstr "Eric Pelletier"
 
 #: Projet.php:12
 msgid "Romain Dubard"
@@ -132,77 +155,80 @@ msgstr "Carlos Descamps"
 #: Projet.php:14
 msgid ""
 "Nous sommes des étudiants de 3ème année d'informatique du CEGEP de Matane."
-msgstr ""
-"We are 3rd year computer science students from CEGEP Matane, Quebec, Canada."
+msgstr "We are 3rd year computer science students at CEGEP de Matane."
 
 #: Projet.php:15
 msgid ""
 "Notre intention est de proposer dans ce projet un site de location de kayak "
 "fonctionnel."
 msgstr ""
-"Our intention is to offer in this project a functional kayak rental site."
+"Our intention is to offer a functional kayak rental site in this project."
 
 #: Projet.php:16
 msgid ""
 "Merci d'avoir porté attention à cette page et bonne navigation sur Locayak !"
 msgstr ""
-"Thank you for paying attention to this page and happy browsing locayak!"
+"Thank you for paying attention to this page and enjoy browsing Locayak!"
 
 #: confirmation-Paiement.php:7
 msgid "Merci pour votre transaction."
-msgstr "Thanks for your payment."
+msgstr "Thank you for your transaction."
 
 #: confirmation-Paiement.php:8
 msgid "Vous allez être redirigé vers la page d'accueil."
 msgstr "You will be redirected to the home page."
 
 #: confirmation-Paiement.php:9
-msgid "si rien ne se passe cliquez sur le lien ci-dessous."
-msgstr "if nothing happens click on the link below."
+msgid "Si rien ne se passe cliquez sur le lien ci-dessous."
+msgstr "If nothing happens click on the link below."
 
 #: confirmation-Paiement.php:10
 msgid "Cliquez-ici"
 msgstr "Click here"
 
-#: footer.php:29
-msgid "Si vous avez des question n'hésitez pas à nous contacter"
+#: footer.php:13
+msgid "Si vous avez des questions n'hésitez pas à nous contacter"
 msgstr "If you have any questions do not hesitate to contact us"
 
-#: footer.php:39
+#: footer.php:23
 msgid "À Propos de Locayak"
 msgstr "About Locayak"
 
-#: footer.php:40
+#: footer.php:24
 msgid "Suivez nous sur Facebook"
 msgstr "Follow us on Facebook"
 
-#: footer.php:41
-msgid "Pour nous contacter"
-msgstr "Contact Us"
+#: footer.php:25
+msgid "Nous contacter"
+msgstr "Contact us"
 
 #: header.php:5
 msgid "Acceuil"
 msgstr "Home"
 
-#: header.php:28
+#: header.php:18
+msgid "LoCayak"
+msgstr "LoCayak"
+
+#: header.php:26
 msgid "Accueil"
 msgstr "Home"
 
-#: header.php:29
+#: header.php:27
 msgid "En Location"
-msgstr "For Rent"
+msgstr "For rent"
 
-#: header.php:42
+#: header.php:40
 msgid "À propos"
-msgstr "Us"
+msgstr "About"
 
-#: header.php:43
+#: header.php:41
 msgid "Messagerie"
-msgstr "Messaging"
+msgstr "Chat"
 
 #: liste-kayaks-v-deux.php:11
 msgid "Votre recherche"
-msgstr "Your search"
+msgstr "Your research"
 
 #: liste-kayaks-v-deux.php:14
 msgid "Recherche"
@@ -214,11 +240,11 @@ msgstr "Click for more details"
 
 #: membre/ajouter-kayak.php:15
 msgid "Ajouter votre Kayak"
-msgstr "Rent your kayak"
+msgstr "Add your Kayak"
 
 #: membre/ajouter-kayak.php:19
 msgid "Votre Kayak"
-msgstr "Your kayak"
+msgstr "Your Kayak"
 
 #: membre/ajouter-kayak.php:20
 msgid "Entrez les information de votre Kayak"
@@ -230,7 +256,7 @@ msgstr "Title of your ad"
 
 #: membre/ajouter-kayak.php:27
 msgid "Description de votre annonce"
-msgstr "Description of your listing"
+msgstr "Description of your ad"
 
 #: membre/ajouter-kayak.php:31
 msgid "Votre adresse"
@@ -241,24 +267,24 @@ msgid "Taille du Kayak"
 msgstr "Kayak size"
 
 #: membre/ajouter-kayak.php:39
-msgid "Petit"
+msgid " Petit"
 msgstr "Small"
 
 #: membre/ajouter-kayak.php:40
-msgid "Moyen"
+msgid " Moyen"
 msgstr "Medium"
 
 #: membre/ajouter-kayak.php:41
-msgid "Grand"
+msgid " Grand"
 msgstr "Large"
 
 #: membre/ajouter-kayak.php:45
 msgid "Coût de la location"
-msgstr "Rent price"
+msgstr "Rental cost"
 
 #: membre/ajouter-kayak.php:48
 msgid "Illustration"
-msgstr "Picture"
+msgstr "Picture of your kayak"
 
 #: membre/ajouter-kayak.php:55
 msgid "Fin des disponibilités: "
@@ -266,7 +292,7 @@ msgstr "End of availability:"
 
 #: membre/ajouter-kayak.php:62
 msgid "Enregistrer le Kayak"
-msgstr "Register Kayak"
+msgstr "Save the Kayak"
 
 #: membre/formulaire-authentification.php:7
 msgid "Authentification"
@@ -274,7 +300,7 @@ msgstr "Authentication"
 
 #: membre/formulaire-authentification.php:15
 msgid "Email:"
-msgstr "Mail address:"
+msgstr "E-mail:"
 
 #: membre/formulaire-authentification.php:19
 msgid "Mot De Passe:"
@@ -282,11 +308,11 @@ msgstr "Password:"
 
 #: membre/formulaire-authentification.php:23
 msgid "Connexion"
-msgstr "Connection"
+msgstr "Log in"
 
 #: membre/formulaire-authentification.php:26
-msgid "Devenez Membre"
-msgstr "Become a Member"
+msgid "Devenez membre"
+msgstr "Become a member"
 
 #: membre/inscription.php:5 membre/inscription.php:29
 msgid "Inscription"
@@ -294,27 +320,27 @@ msgstr "Registration"
 
 #: membre/inscription.php:8
 msgid "Nom*:"
-msgstr "Family name*:"
+msgstr "Name*:"
 
 #: membre/inscription.php:9
 msgid "Nom"
-msgstr "Family name"
+msgstr "Name"
 
 #: membre/inscription.php:11
 msgid "Prénom*:"
-msgstr "Name*:"
+msgstr "First name*:"
 
 #: membre/inscription.php:12
 msgid "Prénom"
-msgstr "Name"
+msgstr "First name"
 
 #: membre/inscription.php:14
 msgid "E-mail*:"
-msgstr "Mail address*:"
+msgstr "E-mail*:"
 
 #: membre/inscription.php:15
 msgid "exemple@gmail.com"
-msgstr "test@gmail.com"
+msgstr "example@gmail.com"
 
 #: membre/inscription.php:17
 msgid "Mot de passe*:"
@@ -326,7 +352,7 @@ msgstr "Password"
 
 #: membre/inscription.php:20
 msgid "Confirmez mot de passe*:"
-msgstr "Confirm password*:"
+msgstr "Confirm password *:"
 
 #: membre/inscription.php:23
 msgid "Numéro de téléphone:"
@@ -346,19 +372,27 @@ msgstr "address"
 
 #: membre/liste-transaction.php:24
 msgid "Retour à Mon Profil"
-msgstr "Back to My Profile"
+msgstr "Back to my profile"
 
-#: membre/liste-transaction.php:27 membre/membre.php:33
+#: membre/liste-transaction.php:27
 msgid "Mes Kayaks"
-msgstr "My Kayaks"
+msgstr "My kayaks"
 
 #: membre/liste-transaction.php:43
 msgid "Coût de la transaction est de"
 msgstr "Transaction cost is"
 
+#: membre/liste-transaction.php:43
+msgid "$"
+msgstr "$ CAD"
+
 #: membre/liste-transaction.php:44
 msgid "Détails de la Transaction"
-msgstr "Transaction Details"
+msgstr "Transaction details"
+
+#: membre/liste-transaction.php:45
+msgid "Aller au Chat"
+msgstr "Go to chat"
 
 #: membre/membre.php:25
 msgid "Description : "
@@ -370,19 +404,27 @@ msgstr "Region:"
 
 #: membre/membre.php:27
 msgid "Ma note : "
-msgstr "My note:"
+msgstr "My grade :"
+
+#: membre/membre.php:27
+msgid "/10"
+msgstr "/10"
 
 #: membre/membre.php:28
-msgid "Ajouter Un Kayak"
+msgid "Ajouter un kayak"
 msgstr "Add a kayak"
 
 #: membre/membre.php:29
-msgid "Voir Mes Transactions"
-msgstr "See My Transactions"
+msgid "Voir mes transactions"
+msgstr "See my transactions"
 
 #: membre/membre.php:30
-msgid "Modifier votre Utilisateur"
-msgstr "Edit your User"
+msgid "Modifier votre utilisateur"
+msgstr "Modify your user"
+
+#: membre/membre.php:33
+msgid "Mes kayaks"
+msgstr "My kayaks"
 
 #: membre/membre.php:48
 msgid "détail"
@@ -398,8 +440,8 @@ msgstr "Change your information"
 
 #: membre/modifier-membre.php:15
 msgid "prenom"
-msgstr "first name"
+msgstr "First name"
 
 #: membre/modifier-membre.php:18
-msgid "Modifier Utilisateur"
-msgstr "Edit User"
+msgid "Modifier votre nom"
+msgstr "Change your name"

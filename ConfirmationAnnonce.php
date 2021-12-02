@@ -26,17 +26,17 @@ require_once CHEMIN_DAO."MembreDAO.php";
 <section>
   <div class="Centre">
     <div class="AnnonceConfirmation">
-      <p class="titreConfirmation">Confimer Votre reservation</p>
+      <p class="titreConfirmation"><?= _('Confirmer votre réservation')?></p>
 
       </br>
       </br>
       </br>
-      <p class="textConfirmation">Prix du kayac par jour de location: <?= $kayak['cout'] ?> $ </p>
+      <p class="textConfirmation"><?= ('Prix du kayak par jour de location: ')?><?= $kayak['cout'] ?><?= _(' $ ')?></p>
       <fieldset>
-        <p>Debut des disponibilité: <input type="text" onselect="configurerDate(1);" onblur="validerDate();"name="dateDebutDisponibiliter" id="dateDebutDisponibiliter" autocomplete="off"></p>
-        <p>Fin des disponibilité: <input type="text" onblur="validerDate();" name="dateFinDisponibiliter" id="dateFinDisponibiliter" autocomplete="off"></p>
+        <p><?= _('Début des disponibilités: ')?><input type="text" onselect="configurerDate(1);" onblur="validerDate();"name="dateDebutDisponibiliter" id="dateDebutDisponibiliter" autocomplete="off"></p>
+        <p><?= _('Fin des disponibilité: ')?><input type="text" onblur="validerDate();" name="dateFinDisponibiliter" id="dateFinDisponibiliter" autocomplete="off"></p>
       </fieldset>
-      <p class="textConfirmation" id="textConfirmation">Prix total: </p>
+      <p class="textConfirmation" id="textConfirmation"><?= _('Prix total: ')?></p>
 </br></br></br></br></br></br></br></br>
       <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="charset" value="utf-8">
@@ -50,7 +50,7 @@ require_once CHEMIN_DAO."MembreDAO.php";
         <input type="submit" value="Payer" />
       </form> -->
       <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
-      <button onclick="testUrl()">Faux Bouton de paiement</button>
+      <button onclick="testUrl()"><?= _('Faux Bouton de paiement')?></button>
 <!-- Set up a container element for the button -->
 <div id="paypal-button-container"></div>
 

@@ -28,11 +28,11 @@ $membre = MembreDAO::recupererMembre($kayak['idMembre']);
       <h1 class="info-titre" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['titreAnnonce']; ?><a title="" ></a></h1>
       <img class= "image" src="images/<?= $kayak['image'];?>" />
       <div class="info-kayak"><?= $kayak["descriptionAnnonce"];?></div>
-      <div class="info-kayak" href =>Propriétaire : <?php echo $membre['prenom'] ?> <?php echo $membre['nom'] ?></div>
-      <div class="info-kayak" href=>Cote propriétaire : <?php echo $membre['cote'] ?>/10</div>
-      <div class="info-kayak" href =>Prix/jours :<?php echo $kayak['cout'] ?>$/jours</div>
-      <div class="info-kayak" href=>Vacant ? OUI </div>
-      <div class="info-kayak" href=>Région : Matanie</div>
+      <div class="info-kayak" href =><?= _('Propriétaire : ')?><?php echo $membre['prenom'] ?> <?php echo $membre['nom'] ?></div>
+      <div class="info-kayak" href=><?= _('Cote propriétaire : ')?><?php echo $membre['cote'] ?>/10</div>
+      <div class="info-kayak" href =><?= _('Prix/jours : ')?><?php echo $kayak['cout'] ?>$/jours</div>
+      <div class="info-kayak" href=><?= _('Vacant ?')?> <?= _('OUI')?></div>
+      <div class="info-kayak" href=><?= _('Région :')?><?= _('Matanie')?></div>
       <div class="info-kayak" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['adresse']; ?></div>
       <form action="ConfirmationAnnonce.php" method="post">
         <input type="hidden" name="idKayak" value=<?= $kayak['id'] ?>>
@@ -44,13 +44,13 @@ $membre = MembreDAO::recupererMembre($kayak['idMembre']);
                   if($membrePresent == $kayak['idMembre'])
                   {
                     ?>
-                        <a href="modifier-kayak.php"  class="btn btn-secondary center">Modifier Ce Kayak</a>
-                        <a href="supprimer-kayak.php"  class="btn btn-secondary center">Supprimer Ce Kayak</a>
+                        <a href="modifier-kayak.php"  class="btn btn-secondary center"><?= _('Modifier ce Kayak')?></a>
+                        <a href="supprimer-kayak.php"  class="btn btn-secondary center"><?= _('Supprimer ce Kayak')?></a>
                       <?php 
                   }
                   else if($membrePresent != $membre['id'])
                   {
-                    ?><button type="submit" id="envoyer-ajout" class="btn btn-secondary">Louer Ce Kayak</button><?php
+                    ?><button type="submit" id="envoyer-ajout" class="btn btn-secondary"><?= _('Louer ce Kayak')?></button><?php
                   }?>
             <?php
                 }
