@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-12-02 15:45-0500\n"
-"PO-Revision-Date: 2021-12-02 16:16-0500\n"
+"POT-Creation-Date: 2021-12-02 16:33-0500\n"
+"PO-Revision-Date: 2021-12-02 16:35-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_CA\n"
@@ -218,11 +218,27 @@ msgstr "Home"
 msgid "En Location"
 msgstr "For rent"
 
+#: header.php:32
+msgid "Mon Compte"
+msgstr "Profile"
+
+#: header.php:33
+msgid "Déconnexion"
+msgstr "Logout"
+
+#: header.php:39
+msgid "Identifiez vous"
+msgstr "Log-in"
+
 #: header.php:40
+msgid "Pas de compte? Inscrivez vous"
+msgstr "No account? Sign up"
+
+#: header.php:44
 msgid "À propos"
 msgstr "About"
 
-#: header.php:41
+#: header.php:45
 msgid "Messagerie"
 msgstr "Chat"
 

@@ -27,14 +27,18 @@
       <li><a href="liste-kayaks-v-deux.php"><?= _('En Location')?></a></li>
       <?php
           if(isset($_SESSION["idMembre"]))
-          {
-            echo "<li><a href='membre/membre.php'>Mon Compte</a></li>";
-            echo "<li><a href='membre/traitement-deconnexion.php'>Déconnexion</a></li>";
+          { 
+            ?>
+            <li><a href='membre/membre.php'><?= _('Mon Compte')?></a></li>
+            <li><a href='membre/traitement-deconnexion.php'><?= _('Déconnexion')?></a></li>
+            <?php
           }
           else
           {
-            echo "<li><a href='membre/formulaire-authentification.php'>Identifiez vous</a></li>";
-            echo "<li><a href='membre/inscription.php'>Pas de compte? Inscrivez vous</a></li>";
+            ?>
+            <li><a href='membre/formulaire-authentification.php'><?= _('Identifiez vous')?></a></li>
+            <li><a href='membre/inscription.php'><?= _('Pas de compte? Inscrivez vous')?></a></li>
+            <?php
           }
       ?>
       <li><a href="Projet.php"><?= _('À propos')?></a></li>
