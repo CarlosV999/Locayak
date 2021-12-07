@@ -17,6 +17,8 @@
     <div class="header">
         <h1><a class="logo" href="Acceuil.php"><?= _('LoCayak')?></a></h1>
       </div>
+      <a href="index.php?language=en">
+      <a href="index.php?language=fr">
     <a  class="hamburger" href="javascript:void(0);" class="icon" onclick="ouvrirLeMenu()">
       <i class="fa fa-bars"></i>
     </a>
