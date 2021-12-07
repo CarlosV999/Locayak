@@ -25,6 +25,7 @@ document.getElementById('formulaireEnvoie').onsubmit = function() {
         }
 		function afficherNouvelleApres(reponse)
 		{
+            
             if(reponse.responseXML != undefined){
                 var xml = reponse.responseXML;
                 noeudNomUtilisateur = xml.getElementsByTagName('nomutilisateur');
