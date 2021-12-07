@@ -19,17 +19,17 @@ require_once "header-admin.php";
                 
                 <div class="image" ><img src="../images/<?= $kayak['image'];?>" /></div>
                 
-                <p class="descriptionAnnonce">description annonce</p>
+                <p class="descriptionAnnonce"><?= _('description annonce')?></p>
                 
                 <div class="renseignementLieu" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['adresse']; ?></div>
                 
-                <div class="renseignementPropriétaire">renseignement propriétaire</div>
+                <div class="renseignementPropriétaire"><?= _('renseignement propriétaire')?></div>
 
                 <div class="type" href="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['type']; ?></div>
                 
-                <a href="modifierKayak.php?id=<?=$kayak['id']?>">Modifier</a>
+                <a href="modifierKayak.php?id=<?=$kayak['id']?>"><?= _('Modifier')?></a>
             
-                <a href="traitement_supprimer_kayak.php?id=<?=$kayak['id']?>">Supprimer</a>
+                <a href="traitement_supprimer_kayak.php?id=<?=$kayak['id']?>"><?= _('Supprimer')?></a>
 
             </div>
         </div>

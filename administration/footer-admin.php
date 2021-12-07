@@ -1,12 +1,3 @@
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
 
       <footer class="page-footer font-small blue pt-4">
 
@@ -20,7 +11,7 @@
     <div class="col-md-6 mt-md-0 mt-3">
 
       <!-- Content -->
-      <p>Si vous avez des question n'hesiter pas a nous contacter</p>
+      <p><?= _("Si vous avez des question n'hesiter pas a nous contacter")?></p>
 
     </div>
     <!-- Grid column -->
@@ -30,9 +21,9 @@
     <!-- Grid column -->
     <div class="col-md-3 mb-md-0 mb-3">
 
-    <div><a class="footer-link" href="Projet.php">À Propos de Locayak</a></div>
-    <div><a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Suiver Nous sur Facebook</a></div>
-    <div><a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Pour Nous Contacter</a></div>
+    <div><a class="footer-link" href="Projet.php"><?= _('À Propos de Locayak')?></a></div>
+    <div><a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><?= _('Suiver Nous sur Facebook')?></a></div>
+    <div><a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><?= _('Pour Nous Contacter')?></a></div>
 
     
     </div>

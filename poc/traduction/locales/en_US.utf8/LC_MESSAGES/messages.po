@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-12-02 16:33-0500\n"
-"PO-Revision-Date: 2021-12-02 16:35-0500\n"
+"POT-Creation-Date: 2021-12-02 17:58-0500\n"
+"PO-Revision-Date: 2021-12-02 17:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_CA\n"
@@ -48,6 +48,17 @@ msgstr ""
 "X-Poedit-SearchPath-33: Projet.php\n"
 "X-Poedit-SearchPath-34: README.md\n"
 "X-Poedit-SearchPath-35: test.php\n"
+"X-Poedit-SearchPath-36: administration/AjouterKayak.php\n"
+"X-Poedit-SearchPath-37: administration/configuration.php\n"
+"X-Poedit-SearchPath-38: administration/envoie-message.php\n"
+"X-Poedit-SearchPath-39: administration/footer-admin.php\n"
+"X-Poedit-SearchPath-40: administration/header-admin.php\n"
+"X-Poedit-SearchPath-41: administration/liste-kayak-admin.php\n"
+"X-Poedit-SearchPath-42: administration/modifierKayak.php\n"
+"X-Poedit-SearchPath-43: administration/traitement_ajouter_kayak.php\n"
+"X-Poedit-SearchPath-44: administration/traitement_modifier_kayak.php\n"
+"X-Poedit-SearchPath-45: administration/traitement_supprimer_kayak.php\n"
+"X-Poedit-SearchPath-46: administration/traitementLocation.php\n"
 
 #: Acceuil.php:23
 msgid ""
@@ -109,7 +120,8 @@ msgstr "$"
 msgid "Début des disponibilités: "
 msgstr "Start of availability:"
 
-#: ConfirmationAnnonce.php:37
+#: ConfirmationAnnonce.php:37 administration/AjouterKayak.php:51
+#: administration/modifierKayak.php:76
 msgid "Fin des disponibilité: "
 msgstr "End of availability:"
 
@@ -170,6 +182,209 @@ msgid ""
 msgstr ""
 "Thank you for paying attention to this page and enjoy browsing Locayak!"
 
+#: administration/AjouterKayak.php:15 membre/ajouter-kayak.php:15
+msgid "Ajouter votre Kayak"
+msgstr "Add your Kayak"
+
+#: administration/AjouterKayak.php:19 administration/modifierKayak.php:17
+#: membre/ajouter-kayak.php:19
+msgid "Votre Kayak"
+msgstr "Your Kayak"
+
+#: administration/AjouterKayak.php:20 administration/modifierKayak.php:18
+#, fuzzy
+#| msgid "Entrez les information de votre Kayak"
+msgid "Entre les information de votre Kayak"
+msgstr "Enter your Kayak information"
+
+#: administration/AjouterKayak.php:22 administration/modifierKayak.php:23
+#: membre/ajouter-kayak.php:23
+msgid "Titre de votre annonce"
+msgstr "Title of your ad"
+
+#: administration/AjouterKayak.php:23 administration/modifierKayak.php:24
+msgid "Titre"
+msgstr "Title"
+
+#: administration/AjouterKayak.php:26 administration/modifierKayak.php:27
+#, fuzzy
+#| msgid "Description de votre annonce"
+msgid "Description de voter annonce"
+msgstr "Description of your ad"
+
+#: administration/AjouterKayak.php:27 administration/modifierKayak.php:28
+#, fuzzy
+#| msgid "Description de votre annonce"
+msgid "DescriptionAnnonce"
+msgstr "Description of your ad"
+
+#: administration/AjouterKayak.php:30 administration/modifierKayak.php:31
+#: membre/ajouter-kayak.php:31
+msgid "Votre adresse"
+msgstr "Your address"
+
+#: administration/AjouterKayak.php:31 administration/modifierKayak.php:32
+#, fuzzy
+#| msgid "Adresse*:"
+msgid "Adresse"
+msgstr "Address*:"
+
+#: administration/AjouterKayak.php:34 administration/modifierKayak.php:35
+#: membre/ajouter-kayak.php:38
+msgid "Taille du Kayak"
+msgstr "Kayak size"
+
+#: administration/AjouterKayak.php:35 administration/modifierKayak.php:57
+#: administration/modifierKayak.php:61 membre/ajouter-kayak.php:39
+msgid " Petit"
+msgstr "Small"
+
+#: administration/AjouterKayak.php:36 administration/modifierKayak.php:48
+#: administration/modifierKayak.php:52 membre/ajouter-kayak.php:40
+msgid " Moyen"
+msgstr "Medium"
+
+#: administration/AjouterKayak.php:37 administration/modifierKayak.php:39
+#: administration/modifierKayak.php:43 membre/ajouter-kayak.php:41
+msgid " Grand"
+msgstr "Large"
+
+#: administration/AjouterKayak.php:40 administration/modifierKayak.php:67
+#, fuzzy
+#| msgid "Coût de la location"
+msgid "Cout de la location"
+msgstr "Rental cost"
+
+#: administration/AjouterKayak.php:41 administration/modifierKayak.php:68
+msgid "Cout"
+msgstr "Cost"
+
+#: administration/AjouterKayak.php:44 administration/modifierKayak.php:71
+#: membre/ajouter-kayak.php:48
+msgid "Illustration"
+msgstr "Picture of your kayak"
+
+#: administration/AjouterKayak.php:50 administration/modifierKayak.php:75
+#, fuzzy
+#| msgid "Début des disponibilités: "
+msgid "Debut des disponibilité: "
+msgstr "Start of availability:"
+
+#: administration/AjouterKayak.php:55 administration/modifierKayak.php:81
+msgid "Terminer"
+msgstr "End"
+
+#: administration/footer-admin.php:14
+#, fuzzy
+#| msgid "Si vous avez des questions n'hésitez pas à nous contacter"
+msgid "Si vous avez des question n'hesiter pas a nous contacter"
+msgstr "If you have any questions do not hesitate to contact us"
+
+#: administration/footer-admin.php:24 footer.php:23
+msgid "À Propos de Locayak"
+msgstr "About Locayak"
+
+#: administration/footer-admin.php:25
+#, fuzzy
+#| msgid "Suivez nous sur Facebook"
+msgid "Suiver Nous sur Facebook"
+msgstr "Follow us on Facebook"
+
+#: administration/footer-admin.php:26
+#, fuzzy
+#| msgid "Nous contacter"
+msgid "Pour Nous Contacter"
+msgstr "Contact us"
+
+#: administration/header-admin.php:6 administration/header-admin.php:28
+#: header.php:5
+msgid "Acceuil"
+msgstr "Home"
+
+#: administration/header-admin.php:20 header.php:18
+msgid "LoCayak"
+msgstr "LoCayak"
+
+#: administration/header-admin.php:29 header.php:27
+msgid "En Location"
+msgstr "For rent"
+
+#: administration/header-admin.php:34 header.php:32
+msgid "Mon Compte"
+msgstr "Profile"
+
+#: administration/header-admin.php:35 header.php:33
+msgid "Déconnexion"
+msgstr "Logout"
+
+#: administration/header-admin.php:41 header.php:39
+msgid "Identifiez vous"
+msgstr "Log-in"
+
+#: administration/header-admin.php:42 header.php:40
+msgid "Pas de compte? Inscrivez vous"
+msgstr "No account? Sign up"
+
+#: administration/header-admin.php:46 header.php:44
+msgid "À propos"
+msgstr "About"
+
+#: administration/header-admin.php:47 header.php:45
+msgid "Messagerie"
+msgstr "Chat"
+
+#: administration/liste-kayak-admin.php:22
+#, fuzzy
+#| msgid "Description de votre annonce"
+msgid "description annonce"
+msgstr "Description of your ad"
+
+#: administration/liste-kayak-admin.php:26
+#, fuzzy
+#| msgid "Cote propriétaire : "
+msgid "renseignement propriétaire"
+msgstr "Owner rating:"
+
+#: administration/liste-kayak-admin.php:30
+#, fuzzy
+#| msgid "Modifier ce Kayak"
+msgid "Modifier"
+msgstr "Edit this Kayak"
+
+#: administration/liste-kayak-admin.php:32
+#, fuzzy
+#| msgid "Supprimer ce Kayak"
+msgid "Supprimer"
+msgstr "Delete this Kayak"
+
+#: administration/modifierKayak.php:9
+#, fuzzy
+#| msgid "Modifier ce Kayak"
+msgid "Modifier votre Kayak"
+msgstr "Edit this Kayak"
+
+#: administration/modifierKayak.php:20
+msgid "ID"
+msgstr "ID"
+
+#: administration/modifierKayak.php:39 administration/modifierKayak.php:43
+#, fuzzy
+#| msgid " Grand"
+msgid "Grand"
+msgstr "Large"
+
+#: administration/modifierKayak.php:48 administration/modifierKayak.php:52
+#, fuzzy
+#| msgid " Moyen"
+msgid "Moyen"
+msgstr "Medium"
+
+#: administration/modifierKayak.php:57 administration/modifierKayak.php:61
+#, fuzzy
+#| msgid " Petit"
+msgid "Petit"
+msgstr "Small"
+
 #: confirmation-Paiement.php:7
 msgid "Merci pour votre transaction."
 msgstr "Thank you for your transaction."
@@ -190,10 +405,6 @@ msgstr "Click here"
 msgid "Si vous avez des questions n'hésitez pas à nous contacter"
 msgstr "If you have any questions do not hesitate to contact us"
 
-#: footer.php:23
-msgid "À Propos de Locayak"
-msgstr "About Locayak"
-
 #: footer.php:24
 msgid "Suivez nous sur Facebook"
 msgstr "Follow us on Facebook"
@@ -202,45 +413,9 @@ msgstr "Follow us on Facebook"
 msgid "Nous contacter"
 msgstr "Contact us"
 
-#: header.php:5
-msgid "Acceuil"
-msgstr "Home"
-
-#: header.php:18
-msgid "LoCayak"
-msgstr "LoCayak"
-
 #: header.php:26
 msgid "Accueil"
 msgstr "Home"
-
-#: header.php:27
-msgid "En Location"
-msgstr "For rent"
-
-#: header.php:32
-msgid "Mon Compte"
-msgstr "Profile"
-
-#: header.php:33
-msgid "Déconnexion"
-msgstr "Logout"
-
-#: header.php:39
-msgid "Identifiez vous"
-msgstr "Log-in"
-
-#: header.php:40
-msgid "Pas de compte? Inscrivez vous"
-msgstr "No account? Sign up"
-
-#: header.php:44
-msgid "À propos"
-msgstr "About"
-
-#: header.php:45
-msgid "Messagerie"
-msgstr "Chat"
 
 #: liste-kayaks-v-deux.php:11
 msgid "Votre recherche"
@@ -254,53 +429,17 @@ msgstr "Research"
 msgid "Cliquez pour plus de détails"
 msgstr "Click for more details"
 
-#: membre/ajouter-kayak.php:15
-msgid "Ajouter votre Kayak"
-msgstr "Add your Kayak"
-
-#: membre/ajouter-kayak.php:19
-msgid "Votre Kayak"
-msgstr "Your Kayak"
-
 #: membre/ajouter-kayak.php:20
 msgid "Entrez les information de votre Kayak"
 msgstr "Enter your Kayak information"
-
-#: membre/ajouter-kayak.php:23
-msgid "Titre de votre annonce"
-msgstr "Title of your ad"
 
 #: membre/ajouter-kayak.php:27
 msgid "Description de votre annonce"
 msgstr "Description of your ad"
 
-#: membre/ajouter-kayak.php:31
-msgid "Votre adresse"
-msgstr "Your address"
-
-#: membre/ajouter-kayak.php:38
-msgid "Taille du Kayak"
-msgstr "Kayak size"
-
-#: membre/ajouter-kayak.php:39
-msgid " Petit"
-msgstr "Small"
-
-#: membre/ajouter-kayak.php:40
-msgid " Moyen"
-msgstr "Medium"
-
-#: membre/ajouter-kayak.php:41
-msgid " Grand"
-msgstr "Large"
-
 #: membre/ajouter-kayak.php:45
 msgid "Coût de la location"
 msgstr "Rental cost"
-
-#: membre/ajouter-kayak.php:48
-msgid "Illustration"
-msgstr "Picture of your kayak"
 
 #: membre/ajouter-kayak.php:55
 msgid "Fin des disponibilités: "
