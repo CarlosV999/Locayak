@@ -1,19 +1,20 @@
 <?php
   include_once "header.php";
+  include_once "configuration.php";
 
 ?>
 <body>
 
 <section>
         <div class="zone-bienvenue">
-            <p><?= _('Bonjour,')?></p>
-            <p><?= _('Ce site de location de kayak est un projet web transactionnel dont les créateurs sont :')?></p>
-         <p><?= _('Éric Pelletier')?></p>
-         <p><?= _('Romain Dubard')?></p>
-         <p><?= _('Carlos Descamps')?></p>
-         <p><?= _("Nous sommes des étudiants de 3ème année d'informatique du CEGEP de Matane.")?></p>
-        <p><?= _('Notre intention est de proposer dans ce projet un site de location de kayak fonctionnel.')?></p>
-         <p><?= _("Merci d'avoir porté attention à cette page et bonne navigation sur Locayak !")?></p>
+          <p><?= _('Bonjour,')?>
+          <?= _('Ce site de location de kayak est un projet web transactionnel dont les créateurs sont :')?>
+          <?= _('Éric Pelletier')?>
+          <?= _('Romain Dubard')?>
+          <?= _('Carlos Descamps')?>
+          <?= _("Nous sommes des étudiants de 3ème année d'informatique du CEGEP de Matane.")?>
+          <?= _('Notre intention est de proposer dans ce projet un site de location de kayak fonctionnel.')?>
+          <?= _("Merci d'avoir porté attention à cette page et bonne navigation sur Locayak !")?></p>
         </div>
       </section>
      
