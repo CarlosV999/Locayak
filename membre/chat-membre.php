@@ -47,6 +47,19 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
 <?php
        include_once "../administration/footer-admin.php";
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 </html>
