@@ -17,4 +17,5 @@ setlocale(LC_ALL, $locale);
 
 bindtextdomain($domaine,$racine);
 textdomain($domaine);
+
 ?>
