@@ -2,30 +2,37 @@
 // Permet d'avoir un lien permanant avec les different chemin du projet 
 session_start();
 define("CHEMIN_DAO",$_SERVER['DOCUMENT_ROOT']."/DevoirTransactionnel/dao/");
-
+if($_COOKIE["lang"] == ""){
+    setcookie("lang", "EN", time()+30*24*60*60);
+    echo $_COOKIE["lang"];
+  }
 //TRADUCTION
 
-$localeEn = "en_US.utf8";
-$localeFr = " ";
+
+$localeEn = "en_CA.utf8"; //$locale="en_CA;
+$localeFr = "fr_CA.utf8"; //$locale="fr_CA;
 
 $racine = "/var/www/html/DevoirTransactionnel/poc/traduction/locales";
 $domaine = "messages";
-
-if ( !empty($_GET['language']) ) {
-    $_COOKIE['language'] = $_GET['language'] === 'en' ? 'en' : 'fr';
-
-    //include "gettext.inc";
-putenv('LC_ALL='.$localeEn);
-//T_setlocale(LC_MESSAGES, $locale);
-setlocale(LC_ALL, $localeEn);
-} else {
-    $_COOKIE['language'] = 'fr';
-    //include "gettext.inc";
-putenv('LC_ALL='.$localeFr);
-//T_setlocale(LC_MESSAGES, $locale);
-setlocale(LC_ALL, $localeFr);
+$langue;
+switch ($_COOKIE["lang"]) {
+    case 'FR':
+        $langue = $localeFr;
+        break;
+    case 'EN':
+        $langue = $localeEn;
+        break;
+    default:
+        # code...
+        break;
 }
-setcookie('language', $_COOKIE['language']);
+    //include "gettext.inc";
+//putenv('LC_ALL='.$localeEn);
+putenv('LANG='.$langue);
+//T_setlocale(LC_MESSAGES, $locale);
+setlocale(LC_MESSAGES, $langue);
+
+//setcookie('language', $_COOKIE['language']);
 
 bindtextdomain($domaine,$racine);
 textdomain($domaine);
