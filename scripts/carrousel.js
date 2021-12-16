@@ -2,7 +2,6 @@ var httpRequest;
 const defilement = 3000;
 //var imageId = document.getElementById("imageId").value;
 var imageId;
-var imageAjax = document.getElementById("ajaxImage").src;  
 /**
 document.getElementById("ajaxImage").onclick = function() 
 { faireRequete('carrousel.php');};
