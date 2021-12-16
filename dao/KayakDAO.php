@@ -8,6 +8,15 @@ class KayakDAO{
         $requeteSelectKayak->execute();
         return $requeteSelectKayak->fetchAll();
     }
+    public static function recupererImagePourIdsuivant($id)
+    {
+        $MESSAGE_SQL_RECUPERER_IMAGE = "SELECT id, image FROM `kayak` WHERE id > :id LIMIT 1";
+        
+        $requeteRecupererImage = BaseDeDonnee::getConnexion()->prepare($MESSAGE_SQL_RECUPERER_IMAGE);
+        $requeteRecupererImage->bindParam(':id', $id, PDO::PARAM_STR);
+        $requeteRecupererImage->execute();
+        return $requeteRecupererImage->fetch();
+    }
     public static function listeKayakPourMembre($id)
     {
         $MESSAGE_SQL_RECUPERER = "SELECT * FROM `kayak` WHERE idMembre = :id";
