@@ -65,6 +65,9 @@ require_once "../administration/header-admin.php";
       
     </fieldset>
   </form>
+  <?=
+  include_once "../administration/footer-admin.php"; 
+  ?>
 </br>
 </body> 
 </html>

@@ -30,7 +30,7 @@ $nomComplet =$membre['nom']." ".$membre['prenom'];
       <input type="text" class="idUtilisateur" id="idUtilisateur" hidden value="<?=$id;?>">
       <input type="text" class="idLocation" id="idLocation" hidden value="<?=$idLocation;?>">
       <input type="text" class="messageInput" id="messageInput" >
-      <input type="submit" value="Envoyer">
+      <input type="submit" value="<?=_('Envoyer')?>">
 </form>
 </div>
 

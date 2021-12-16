@@ -21,7 +21,7 @@ $membre = MembreDAO::recupererMembre($kayak['idMembre']);
 //print_r($kayak['idMembre']);
 ?>
 
-<title>Annonce</title>
+<title><?= _('Annonce')?></title>
 
   <div class="kayak">
         
@@ -29,8 +29,8 @@ $membre = MembreDAO::recupererMembre($kayak['idMembre']);
       <img class= "image" src="images/<?= $kayak['image'];?>" />
       <div class="info-kayak"><?= $kayak["descriptionAnnonce"];?></div>
       <div class="info-kayak" href =><?= _('Propriétaire : ')?><?php echo $membre['prenom'] ?> <?php echo $membre['nom'] ?></div>
-      <div class="info-kayak" href=><?= _('Cote propriétaire : ')?><?php echo $membre['cote'] ?>/10</div>
-      <div class="info-kayak" href =><?= _('Prix/jours : ')?><?php echo $kayak['cout'] ?>$/jours</div>
+      <div class="info-kayak" href=><?= _('Cote propriétaire : ')?><?php echo $membre['cote'] ?><?= _('/10')?></div>
+      <div class="info-kayak" href =><?= _('Prix/jours : ')?><?php echo $kayak['cout'] ?><?= _('$/jours')?></div>
       <div class="info-kayak" href=><?= _('Vacant ?')?> <?= _('OUI')?></div>
       <div class="info-kayak" href=><?= _('Région :')?><?= _('Matanie')?></div>
       <div class="info-kayak" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['adresse']; ?></div>

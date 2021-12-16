@@ -1,6 +1,7 @@
-<?php echo '<?xml version="1.0" encoding="ISO-8859-1"?>'?>
+<?php 
+echo '<?xml version="1.0" encoding="ISO-8859-1"?>';
+header('Content-type: application/xml');
 
-<?php
 
 require_once "configuration.php";
 
@@ -9,7 +10,6 @@ require_once CHEMIN_DAO."MembreDAO.php";
 
 
 $numeroLocation = $_GET['idLocation'];
-$chat_array = MessageDAO::listeMessage();
 loadChat($numeroLocation);
 
 function loadChat($numeroLocation)
@@ -30,7 +30,7 @@ function loadChat($numeroLocation)
 
 }
 
-header('Content-type: application/xml');
+
 
 
 function displayCommentaire($liste_message)

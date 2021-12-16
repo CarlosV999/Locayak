@@ -12,7 +12,7 @@ require_once "../administration/header-admin.php";
 <div class="messageBox">
 <form action="#" method="POST" id="formulaireEnvoie">
       <input type="text" class="messageInput" id="messageInput" >
-      <input type="submit" id="envoie" value="Envoyer">
+      <input type="submit" id="envoie" value="<?= _('Envoyer')?>">
 </form>
 </div>
 

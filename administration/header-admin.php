@@ -18,6 +18,7 @@
 <body>
     <div class="header">
         <h1><a class="logo" href="../Acceuil.php"><?= _("LoCayak")?></a></h1>
+        <button  name=”Salut” value=””Salut”” id="changerLangue">EN</button>
       </div>
     <a  class="hamburger" href="javascript:void(0);" class="icon" onclick="ouvrirLeMenu()">
       <i class="fa fa-bars"></i>

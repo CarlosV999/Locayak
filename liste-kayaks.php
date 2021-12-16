@@ -26,7 +26,7 @@ require_once "header.php";
                 <div class="renseignement" href ="voir-membre.php?id=<?= $kayak['idMembre'] ?>"><?php ?></div>
                 <div class="renseignement" href ="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['adresse']; ?></div>
                 <div class="type" href="kayak.php?id=<?= $kayak['id'] ?>"><?= $kayak['type']; ?></div>
-                <div><a href="Annonce.php?id=<?php echo $kayak['id']; ?>" title="">Cliquer pour plus de détail</a></div>
+                <div><a href="Annonce.php?id=<?php echo $kayak['id']; ?>" title=""><?= _('Cliquer pour plus de détail')?></a></div>
             </div>
         </div>
         <?php
