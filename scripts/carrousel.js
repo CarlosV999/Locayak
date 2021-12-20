@@ -1,11 +1,7 @@
 var httpRequest;
 const defilement = 3000;
-//var imageId = document.getElementById("imageId").value;
 var imageId;
-/**
-document.getElementById("ajaxImage").onclick = function() 
-{ faireRequete('carrousel.php');};
-**/
+
 setInterval(faireRequete, defilement);
 
 function faireRequete(){
@@ -30,11 +26,9 @@ function afficherImage(){
             try {
                 var reponseJson = JSON.parse(data);
                 document.getElementById("ajaxImage").src = "images/"+reponseJson.image;
-                //imageId = reponseJson.id;
                 document.getElementById("imageId").innerHTML = reponseJson.id;  
                 document.getElementById("annonceImg").href = "Annonce.php?id="+reponseJson.id;
             } catch (error) {
-                //alert("dans marde");
                 document.getElementById("imageId").innerHTML = "1";
                 faireRequete();
             }              
