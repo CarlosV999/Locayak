@@ -4,3 +4,5 @@
 </br>
 <h1> Partie Ajax</h1> </br>
 Fiche de présentation Romain : https://docs.google.com/document/d/1sXDLmeEhQulHc4fgaalcpFolq1O0XyDDXxgyfWkbZTs/edit?usp=sharing</br>
+
+Vidéo : https://youtu.be/mSB9mmqSyRE
