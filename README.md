@@ -6,10 +6,13 @@
 **Maintenance 1**
 
 description du site:
-Le site "Locayak" est un site transactionnel qui répertorie des annonces de personnes souhaitant louer leurs kayaks pendant une période choisie. Le site propose de publier et d'afficher les annonces et prévois de récupérer les frais de la réservation, le paiement en ligne est nécessaire pour que la reservation soit prise en compte.
-Une commision de Locayak est prélevé sur le montant payé par le client et le reste est reversé au locateur.
+Site de location de kayaks de particuliers à particuliers sur une période définie. Ceci permet donc à un 
+propriétaire de louer son kayak totalement en ligne et au locataire et d’aller le chercher à l’endroit 
+convenu.
+Le site permettra une mise en contact facilité entre le locateur et le locataire. Aussi le locataire une fois 
+la remise du kayak confirmé par le locateur pourra commenter et noter le locateur en lui-même. Ainsi les 
+locateurs avec la plus grande cote seront mis en avant.
 
-La version anglaise du site est disponnible.
 
 Merci.
 
