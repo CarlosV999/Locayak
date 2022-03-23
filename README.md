@@ -11,6 +11,8 @@ Une commision de Locayak est prélevé sur le montant payé par le client et le 
 
 La version anglaise du site est disponnible.
 
+Merci.
+
 
 <h1> Partie Ajax</h1> </br>
 Fiche de présentation Romain : https://docs.google.com/document/d/1sXDLmeEhQulHc4fgaalcpFolq1O0XyDDXxgyfWkbZTs/edit?usp=sharing</br>
